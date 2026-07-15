@@ -132,3 +132,16 @@ def test_comment_html_is_sanitized(app, client):
         comment = db.session.scalar(db.select(Comment))
         assert comment is not None
         assert "<script" not in comment.text
+
+
+def test_seed_content_is_useful_and_idempotent(app):
+    runner = app.test_cli_runner()
+    assert runner.invoke(args=["seed-content"]).exit_code == 0
+    assert runner.invoke(args=["seed-content"]).exit_code == 0
+
+    with app.app_context():
+        posts = db.session.scalars(db.select(BlogPost)).all()
+        assert len(posts) == 3
+        assert db.session.get(User, 1).name == "Arash"
+        assert all(len(post.body) > 400 for post in posts)
+        assert all("<script" not in post.body for post in posts)

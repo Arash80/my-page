@@ -5,6 +5,7 @@ from datetime import date
 from functools import wraps
 
 import nh3
+import click
 from dotenv import load_dotenv
 from flask import (
     Flask,
@@ -39,6 +40,7 @@ from sqlalchemy.orm import relationship
 from werkzeug.security import check_password_hash, generate_password_hash
 
 from forms import CommentForm, CreatePostForm, EmptyForm, LoginForm, RegisterForm
+from content import DEMO_POSTS
 
 
 load_dotenv()
@@ -157,6 +159,31 @@ def create_app(test_config=None):
     def gravatar_url(email, size=100):
         digest = hashlib.md5(email.strip().lower().encode("utf-8")).hexdigest()
         return f"https://www.gravatar.com/avatar/{digest}?s={size}&d=retro&r=g"
+
+    @app.cli.command("seed-content")
+    def seed_content_command():
+        """Add or refresh the public demo articles without deleting other data."""
+        author = db.session.get(User, app.config["ADMIN_USER_ID"])
+        if author is None:
+            raise click.ClickException(
+                "Create the admin account first, then run this command again."
+            )
+
+        author.name = "Arash"
+        for article in DEMO_POSTS:
+            post = db.session.scalar(
+                db.select(BlogPost).filter_by(title=article["title"])
+            )
+            if post is None:
+                post = BlogPost(title=article["title"], author=author)
+                db.session.add(post)
+            post.subtitle = article["subtitle"]
+            post.img_url = article["img_url"]
+            post.body = sanitize_html(article["body"])
+            post.date = date.today().strftime("%B %d, %Y")
+
+        db.session.commit()
+        click.echo(f"Added or refreshed {len(DEMO_POSTS)} useful demo articles.")
 
     @app.get("/")
     def get_all_posts():

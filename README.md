@@ -35,6 +35,15 @@ Run the application:
 flask --app main run --debug
 ```
 
+Add or refresh the three demo articles after creating the admin account:
+
+```powershell
+flask --app main seed-content
+```
+
+The command preserves unrelated posts, accounts, and comments. It can be run
+again whenever the bundled starter articles are updated.
+
 The database is created automatically in `instance/blog.db`. The first user
 normally receives ID `1`; set `ADMIN_USER_ID` in `.env` to the ID that should
 manage posts.
