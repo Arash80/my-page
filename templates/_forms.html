@@ -1,0 +1,15 @@
+{% macro render_form(form) %}
+<form method="post" novalidate>
+  {{ form.hidden_tag() }}
+  {% for field in form if field.type not in ('CSRFTokenField', 'SubmitField') %}
+    <div class="form-group">
+      {{ field.label }}
+      {{ field(class_="form-control") }}
+      {% for error in field.errors %}
+        <small class="form-text text-danger">{{ error }}</small>
+      {% endfor %}
+    </div>
+  {% endfor %}
+  {{ form.submit(class_="btn btn-primary") }}
+</form>
+{% endmacro %}

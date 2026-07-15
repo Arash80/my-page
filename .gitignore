@@ -6,6 +6,10 @@ instance/*
 !instance/.gitignore
 .webassets-cache
 .env
+.vscode/
+*.db
+*.sqlite
+*.sqlite3
 
 ### Flask.Python Stack ###
 # Byte-compiled / optimized / DLL files

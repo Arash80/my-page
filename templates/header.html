@@ -38,7 +38,7 @@
         <li class="nav-item">
           <a class="nav-link" href="{{ url_for('get_all_posts') }}">Home</a>
         </li>
-          {% if not logged_in %}
+          {% if not current_user.is_authenticated %}
               <li class="nav-item">
                 <a class="nav-link" href="{{ url_for('login') }}">Login</a>
               </li>
@@ -47,7 +47,10 @@
               </li>
             {% else %}
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
+                <form method="post" action="{{ url_for('logout') }}" class="nav-link p-0">
+                  {{ logout_form.hidden_tag() }}
+                  <button type="submit" class="btn btn-link nav-link border-0 p-0">Log Out</button>
+                </form>
               </li>
             {% endif %}
         <li class="nav-item">
@@ -60,3 +63,13 @@
     </div>
   </div>
 </nav>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <div class="container" style="padding-top: 90px;">
+      {% for category, message in messages %}
+        <div class="alert alert-{{ category }}" role="alert">{{ message }}</div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
