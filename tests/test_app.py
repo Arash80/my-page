@@ -71,6 +71,16 @@ def test_public_pages_and_missing_post(client):
     for path in ("/", "/about", "/contact", "/login", "/register"):
         assert client.get(path).status_code == 200
     assert client.get("/post/9999").status_code == 404
+    assert client.get("/ckeditor/static/standard/ckeditor.js").status_code == 404
+
+
+def test_rich_text_editor_uses_secure_local_assets(app, client):
+    post_id = create_post(app)
+    login(client, "admin@example.com", "admin-pass-123")
+    response = client.get(f"/edit-post/{post_id}")
+    assert response.status_code == 200
+    assert b"vendor/quill/quill.js" in response.data
+    assert b"ckeditor" not in response.data.lower()
 
 
 def test_admin_crud_uses_post_for_changes(app, client):

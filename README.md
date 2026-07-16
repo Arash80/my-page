@@ -7,7 +7,7 @@ comments, and a SQLite development database.
 
 - User registration, login, and logout
 - Admin-only post creation, editing, and deletion
-- Rich-text posts and comments with server-side HTML sanitization
+- Quill-powered rich-text posts and comments with server-side HTML sanitization
 - CSRF-protected forms and POST-only state-changing actions
 - Environment-based secrets and deployment configuration
 - Automated route, authorization, CRUD, and sanitization tests

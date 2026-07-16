@@ -1,6 +1,5 @@
 import hashlib
 import os
-import warnings
 from datetime import date
 from functools import wraps
 
@@ -16,17 +15,6 @@ from flask import (
     render_template,
     url_for,
 )
-
-# Flask-CKEditor warns when its optional Bleach helper is unavailable. This app
-# deliberately uses the maintained nh3 sanitizer instead.
-warnings.filterwarnings(
-    "ignore",
-    message='The "bleach" library is not installed.*',
-    category=UserWarning,
-    module="flask_ckeditor.utils",
-)
-
-from flask_ckeditor import CKEditor  # noqa: E402
 from flask_login import (
     LoginManager,
     UserMixin,
@@ -46,7 +34,6 @@ from content import DEMO_POSTS
 load_dotenv()
 
 db = SQLAlchemy()
-ckeditor = CKEditor()
 login_manager = LoginManager()
 login_manager.login_view = "login"
 login_manager.login_message_category = "info"
@@ -140,7 +127,6 @@ def create_app(test_config=None):
         raise RuntimeError("SECRET_KEY is required. Copy .env.example to .env and set it.")
 
     db.init_app(app)
-    ckeditor.init_app(app)
     login_manager.init_app(app)
 
     @app.template_filter("safe_html")

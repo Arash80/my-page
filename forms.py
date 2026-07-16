@@ -1,7 +1,16 @@
-from flask_ckeditor import CKEditorField
 from flask_wtf import FlaskForm
-from wtforms import PasswordField, StringField, SubmitField
-from wtforms.validators import DataRequired, Email, Length, URL
+from html import unescape
+import re
+
+from wtforms import HiddenField, PasswordField, StringField, SubmitField
+from wtforms.validators import DataRequired, Email, Length, URL, ValidationError
+
+
+def rich_text_required(_form, field):
+    """Reject editor markup that contains no readable content."""
+    text = unescape(re.sub(r"<[^>]*>", "", field.data or ""))
+    if not text.replace("\xa0", " ").strip():
+        raise ValidationError("This field is required.")
 
 
 class CreatePostForm(FlaskForm):
@@ -12,7 +21,7 @@ class CreatePostForm(FlaskForm):
     img_url = StringField(
         "Blog Image URL", validators=[DataRequired(), URL(), Length(max=500)]
     )
-    body = CKEditorField("Blog Content", validators=[DataRequired()])
+    body = HiddenField("Blog Content", validators=[rich_text_required])
     submit = SubmitField("Save Post")
 
 
@@ -34,7 +43,7 @@ class LoginForm(FlaskForm):
 
 
 class CommentForm(FlaskForm):
-    comment = CKEditorField("Comment", validators=[DataRequired()])
+    comment = HiddenField("Comment", validators=[rich_text_required])
     submit = SubmitField("Submit")
 
 
