@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Arash Golabi — Applied AI and Machine Learning Engineer portfolio">
+  <title>Arash Golabi | Applied AI & Machine Learning Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">Arash Golabi</a>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#research">Research</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="kicker">Applied AI · Machine Learning · Research Engineering</p>
+        <h1>Building reliable AI systems from research to deployment.</h1>
+        <p class="lead">I am an Applied AI and Machine Learning Engineer based in Montreal. I build production-oriented ML systems, agentic RAG applications, trustworthy AI tools, and research-driven solutions in adversarial AI, reinforcement learning, and distributed intelligence.</p>
+        <div class="actions">
+          <a class="button primary" href="#projects">View projects</a>
+          <a class="button secondary" href="mailto:arash.golabi@gmail.com">Contact me</a>
+          <a class="button secondary" href="https://github.com/Arash80" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <img src="https://avatars.githubusercontent.com/u/20566834?v=4" alt="Arash Golabi">
+        <div>
+          <strong>Arash Golabi</strong>
+          <span>Applied AI & ML Engineer</span>
+          <span>Montreal, Canada</span>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="projects">
+      <div class="wrap">
+        <p class="kicker">Selected work</p>
+        <h2>Featured projects</h2>
+        <div class="cards">
+          <article class="card">
+            <span class="tag">Reliable AI</span>
+            <h3>MetricTrace</h3>
+            <p>Auditable metric-computation engine with deterministic Python calculations, strict Pydantic schemas, stable JSON contracts, Streamlit, CLI workflows, and optional grounded LangChain explanations.</p>
+            <div class="stack">Python · Pydantic · LangChain · Streamlit · pytest</div>
+            <a href="https://github.com/Arash80/metric_trace" target="_blank" rel="noreferrer">Repository →</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">MLOps</span>
+            <h3>Fraud ML Platform</h3>
+            <p>Production-oriented fraud detection platform with temporal validation, LightGBM/XGBoost, calibration, conformal prediction, drift analysis, Airflow, MLflow, FastAPI, dbt, PostgreSQL, Docker, and AWS deployment work.</p>
+            <div class="stack">LightGBM · XGBoost · Airflow · MLflow · FastAPI</div>
+            <a href="https://github.com/Arash80/fraud-ml-platform" target="_blank" rel="noreferrer">Repository →</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">Agentic AI</span>
+            <h3>Advanced Agentic RAG</h3>
+            <p>Document-intelligence system comparing dense, sparse, hybrid, MMR, multi-query, and parent-document retrieval with reranking, evidence sufficiency checks, corrective routing, citations, guardrails, tracing, and evaluation.</p>
+            <div class="stack">LangChain · Qdrant · BM25 · Reranking · Phoenix</div>
+            <a href="https://github.com/Arash80/Agentic-RAG-System" target="_blank" rel="noreferrer">Repository →</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">Local RAG</span>
+            <h3>DeskPilot</h3>
+            <p>Privacy-aware IT help-desk assistant using multi-source retrieval over CSV, SQLite, and PDF knowledge bases, local Ollama inference, source-grounded answers, security-aware escalation, Streamlit, tests, and CI.</p>
+            <div class="stack">Ollama · Chroma · LangChain · Streamlit · GitHub Actions</div>
+            <a href="https://github.com/Arash80/deskpilot-it-helpdesk" target="_blank" rel="noreferrer">Repository →</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">Deep Learning</span>
+            <h3>Chest X-Ray Diagnosis</h3>
+            <p>End-to-end multi-label chest X-ray classification with DenseNet121, patient-disjoint validation, class-imbalance handling, MLflow tracking, AUROC evaluation, GradCAM explanations, YAML configuration, and tests.</p>
+            <div class="stack">PyTorch · DenseNet121 · MLflow · GradCAM</div>
+            <a href="https://github.com/Arash80/chest-xray-diagnosis" target="_blank" rel="noreferrer">Repository →</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">Knowledge Graphs</span>
+            <h3>CyberGraphRAG</h3>
+            <p>Local GraphRAG platform for cybersecurity research PDFs with Neo4j ingestion, semantic embeddings, vector search, graph context, Ollama generation, and source citations.</p>
+            <div class="stack">Neo4j · GraphRAG · Ollama · Sentence Transformers</div>
+            <a href="https://github.com/Arash80/cyber-graphrag" target="_blank" rel="noreferrer">Repository →</a>
+          </article>
+        </div>
+        <p class="note">Some repositories may remain private while publication, dataset, licensing, or intellectual-property reviews are completed.</p>
+      </div>
+    </section>
+
+    <section class="section alt" id="skills">
+      <div class="wrap">
+        <p class="kicker">Capabilities</p>
+        <h2>Technical focus</h2>
+        <div class="skill-grid">
+          <div><h3>Machine Learning</h3><p>PyTorch, scikit-learn, LightGBM, XGBoost, pandas, NumPy, model calibration, temporal validation, imbalanced learning, and rigorous evaluation.</p></div>
+          <div><h3>GenAI & RAG</h3><p>LangChain, LangGraph, LCEL, Hugging Face, Ollama, Qdrant, Chroma, FAISS, Neo4j, GraphRAG, hybrid retrieval, reranking, and guardrails.</p></div>
+          <div><h3>MLOps & Data</h3><p>MLflow, Airflow, FastAPI, Docker, PostgreSQL, dbt, GitHub Actions, pytest, Ruff, mypy, configuration-driven pipelines, and reproducibility.</p></div>
+          <div><h3>Trustworthy AI</h3><p>Adversarial ML, anomaly detection, robust evaluation, uncertainty, conformal prediction, abstention, provenance, structured evidence, and auditable computation.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="research">
+      <div class="wrap two-col">
+        <div>
+          <p class="kicker">Research</p>
+          <h2>Research-backed engineering</h2>
+          <p>I am an author or co-author of 14 peer-reviewed journal and conference publications spanning distributed AI security, Hardware Trojan detection, reinforcement-learning-based energy optimization, cyber-physical-system security, fault detection, control, and system identification.</p>
+        </div>
+        <div class="research-links">
+          <a href="https://scholar.google.com/citations?hl=en&user=JTtQ114AAAAJ" target="_blank" rel="noreferrer">Google Scholar →</a>
+          <a href="https://github.com/Arash80" target="_blank" rel="noreferrer">GitHub profile →</a>
+          <a href="mailto:arash.golabi@gmail.com">Email →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="wrap footer-inner">
+      <div><strong>Arash Golabi</strong><span>Applied AI & Machine Learning Engineer</span></div>
+      <a href="mailto:arash.golabi@gmail.com">arash.golabi@gmail.com</a>
+    </div>
+  </footer>
+</body>
+</html>
