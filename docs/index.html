@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Arash — Applied AI and Machine Learning Engineer portfolio">
-  <title>Arash | Applied AI &amp; Machine Learning Engineer</title>
+  <meta name="description" content="Arash — Applied AI, machine learning, reinforcement learning, and control engineering portfolio">
+  <title>Arash | Applied AI, ML &amp; Intelligent Control</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
@@ -16,8 +16,9 @@
       <a class="brand" href="#top">Arash</a>
       <div class="nav-links">
         <a href="#projects">Projects</a>
+        <a href="#research-control">Research &amp; Control</a>
         <a href="#skills">Skills</a>
-        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
         <a href="resume.html">Résumé</a>
         <a href="#contact">Contact</a>
       </div>
@@ -27,9 +28,9 @@
   <header class="hero" id="top">
     <div class="wrap hero-grid">
       <div>
-        <p class="kicker">Applied AI · Machine Learning · Research Engineering</p>
-        <h1>Building reliable AI systems from research to deployment.</h1>
-        <p class="lead">I am an Applied AI and Machine Learning Engineer. I build production-oriented ML systems, agentic RAG applications, trustworthy AI tools, and research-driven solutions in adversarial AI, reinforcement learning, and distributed intelligence.</p>
+        <p class="kicker">Applied AI · Machine Learning · Reinforcement Learning · Control</p>
+        <h1>Building reliable AI and intelligent control systems from research to deployment.</h1>
+        <p class="lead">I am an Applied AI and Machine Learning Engineer with a strong control-engineering background. I build production-oriented ML systems, agentic AI applications, trustworthy AI tools, and learning-based solutions for dynamic and cyber-physical systems.</p>
         <div class="actions">
           <a class="button primary" href="#projects">View projects</a>
           <a class="button secondary" href="resume.html">View résumé</a>
@@ -42,6 +43,7 @@
         <div>
           <strong>Arash</strong>
           <span>Applied AI &amp; ML Engineer</span>
+          <span>ML · RL · Intelligent Control</span>
           <span>Montreal, Canada</span>
         </div>
       </aside>
@@ -51,12 +53,20 @@
   <main>
     <section class="section" id="projects">
       <div class="wrap">
-        <p class="kicker">Selected work</p>
-        <h2>Featured projects</h2>
-        <p class="section-intro">Selected AI and machine-learning systems spanning reliable computation, MLOps, retrieval, deep learning, and knowledge graphs.</p>
+        <p class="kicker">Engineering portfolio</p>
+        <h2>Selected projects</h2>
+        <p class="section-intro">A broader selection of production ML, MLOps, agentic AI, local AI, deep learning, and knowledge-system projects. Use the filters to focus on the work most relevant to a role.</p>
 
-        <div class="cards project-grid">
-          <article class="card">
+        <div class="project-filters" role="group" aria-label="Filter projects">
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-button" type="button" data-filter="ml">ML &amp; Deep Learning</button>
+          <button class="filter-button" type="button" data-filter="mlops">MLOps &amp; Data</button>
+          <button class="filter-button" type="button" data-filter="genai">GenAI &amp; Agents</button>
+          <button class="filter-button" type="button" data-filter="trustworthy">Trustworthy AI</button>
+        </div>
+
+        <div class="cards project-grid" id="project-grid">
+          <article class="card" data-categories="trustworthy ml">
             <span class="tag">Reliable AI</span>
             <h3>MetricTrace</h3>
             <p>Auditable metric-computation system that separates deterministic calculations from optional LLM-generated explanations.</p>
@@ -64,7 +74,7 @@
             <a href="case-studies.html#metrictrace" aria-label="Read the MetricTrace case study">Read case study →</a>
           </article>
 
-          <article class="card">
+          <article class="card" data-categories="ml mlops trustworthy">
             <span class="tag">MLOps</span>
             <h3>Fraud ML Platform</h3>
             <p>Production-oriented fraud-detection platform with temporal validation, calibrated models, experiment tracking, drift analysis, orchestration, and API deployment.</p>
@@ -72,7 +82,7 @@
             <a href="case-studies.html#fraud-platform" aria-label="Read the Fraud ML Platform case study">Read case study →</a>
           </article>
 
-          <article class="card">
+          <article class="card" data-categories="genai trustworthy">
             <span class="tag">Agentic AI</span>
             <h3>Advanced Agentic RAG</h3>
             <p>Evaluation-oriented document-intelligence system with hybrid retrieval, reranking, evidence checks, corrective routing, citations, guardrails, and tracing.</p>
@@ -80,52 +90,120 @@
             <a href="case-studies.html#agentic-rag" aria-label="Read the Advanced Agentic RAG case study">Read case study →</a>
           </article>
 
-          <article class="card">
+          <article class="card" data-categories="genai trustworthy">
             <span class="tag">Local RAG</span>
             <h3>DeskPilot</h3>
             <p>Privacy-aware IT help-desk assistant with local inference and retrieval across CSV, SQLite, and PDF knowledge sources.</p>
             <div class="stack">Ollama · Chroma · LangChain · Streamlit</div>
             <a href="case-studies.html#deskpilot" aria-label="Read the DeskPilot case study">Read case study →</a>
           </article>
-          <article class="card">
+
+          <article class="card" data-categories="mlops">
+            <span class="tag">Data Engineering</span>
+            <h3>ETL Pipeline</h3>
+            <p>Tested Airflow pipeline that ingests NASA APOD data, validates records, and performs idempotent PostgreSQL upserts.</p>
+            <div class="stack">Airflow · Astro · PostgreSQL · Docker · GitHub Actions</div>
+            <a href="case-studies.html#etl-pipeline" aria-label="Read the ETL Pipeline case study">Read case study →</a>
+          </article>
+
+          <article class="card" data-categories="ml trustworthy">
             <span class="tag">Deep Learning</span>
             <h3>Chest X-Ray Diagnosis</h3>
             <p>Multi-label DenseNet121 workflow with patient-disjoint validation, AUROC evaluation, experiment tracking, and GradCAM explanations.</p>
             <div class="stack">PyTorch · DenseNet121 · MLflow · GradCAM</div>
             <a href="case-studies.html#chest-xray" aria-label="Read the Chest X-Ray Diagnosis case study">Read case study →</a>
           </article>
-          <article class="card">
+
+          <article class="card" data-categories="genai trustworthy">
+            <span class="tag">AI Agents</span>
+            <h3>Reflexion Agent</h3>
+            <p>Bounded draft–critique–search–revision workflow with structured state, citation validation, retries, and testable LangGraph nodes.</p>
+            <div class="stack">LangGraph · Pydantic · Tool Calling · pytest</div>
+            <a href="case-studies.html#reflexion-agent" aria-label="Read the Reflexion Agent case study">Read case study →</a>
+          </article>
+
+          <article class="card" data-categories="genai trustworthy">
             <span class="tag">Knowledge Graphs</span>
             <h3>CyberGraphRAG</h3>
             <p>Local cybersecurity research assistant combining Neo4j graph context, semantic retrieval, generation, and page-level citations.</p>
             <div class="stack">Neo4j · GraphRAG · Ollama · Embeddings</div>
             <a href="case-studies.html#cyber-graphrag" aria-label="Read the CyberGraphRAG case study">Read case study →</a>
           </article>
+
+          <article class="card" data-categories="genai mlops">
+            <span class="tag">Local AI</span>
+            <h3>TechRAG Local</h3>
+            <p>Local PDF question-answering application with safe upload handling, citations, latency reporting, evaluation, Streamlit, and FastAPI.</p>
+            <div class="stack">PyMuPDF · Ollama · Streamlit · FastAPI · CI</div>
+            <a href="case-studies.html#techrag-local" aria-label="Read the TechRAG Local case study">Read case study →</a>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section alt" id="skills">
+    <section class="section alt" id="research-control">
+      <div class="wrap">
+        <p class="kicker">Research &amp; control engineering</p>
+        <h2>Learning, estimation, security, and control</h2>
+        <p class="section-intro">Publication-backed work that demonstrates my control-engineering foundation without requiring unpublished or collaborator-owned source code to be public.</p>
+
+        <div class="cards project-grid research-project-grid">
+          <article class="card">
+            <span class="tag">Reinforcement Learning</span>
+            <h3>RL-Based Desalination Control</h3>
+            <p>Deep reinforcement-learning methods for energy-aware operation of reverse-osmosis desalination under changing demand and operating constraints.</p>
+            <div class="stack">Deep RL · Process Control · Energy Optimization · MATLAB</div>
+            <a href="case-studies.html#rl-desalination">Read research summary →</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">AI Security</span>
+            <h3>Hardware Trojan Detection</h3>
+            <p>Uncertainty-aware deep-learning framework for robust detection and identification of hardware Trojans using Monte Carlo dropout.</p>
+            <div class="stack">Deep Learning · Uncertainty · Cybersecurity · Classification</div>
+            <a href="case-studies.html#hardware-trojan">Read research summary →</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">System Identification</span>
+            <h3>Bayesian LPV Identification</h3>
+            <p>Bayesian identification of linear parameter-varying models for complex dynamic processes and control-oriented analysis.</p>
+            <div class="stack">LPV Models · Bayesian Estimation · State Space · Control</div>
+            <a href="case-studies.html#lpv-identification">Read research summary →</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">Cyber-Physical Systems</span>
+            <h3>Attack &amp; Fault Detection</h3>
+            <p>Observer- and residual-based methods for detecting, isolating, and evaluating attacks and faults in nonlinear cyber-physical systems.</p>
+            <div class="stack">Observers · Residuals · Fault Detection · Robust Control</div>
+            <a href="case-studies.html#cps-security">Read research summary →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
       <div class="wrap">
         <p class="kicker">Capabilities</p>
         <h2>Technical focus</h2>
         <div class="skill-grid">
           <div><h3>Machine Learning</h3><p>PyTorch, scikit-learn, LightGBM, XGBoost, pandas, NumPy, model calibration, temporal validation, imbalanced learning, and rigorous evaluation.</p></div>
-          <div><h3>GenAI &amp; RAG</h3><p>LangChain, LangGraph, LCEL, Hugging Face, Ollama, Qdrant, Chroma, FAISS, Neo4j, GraphRAG, hybrid retrieval, reranking, and guardrails.</p></div>
+          <div><h3>GenAI &amp; Agents</h3><p>LangChain, LangGraph, LCEL, Hugging Face, Ollama, Qdrant, Chroma, FAISS, Neo4j, GraphRAG, hybrid retrieval, reranking, and guardrails.</p></div>
           <div><h3>MLOps &amp; Data</h3><p>MLflow, Airflow, FastAPI, Docker, PostgreSQL, dbt, GitHub Actions, pytest, Ruff, mypy, configuration-driven pipelines, and reproducibility.</p></div>
-          <div><h3>Trustworthy AI</h3><p>Adversarial ML, anomaly detection, robust evaluation, uncertainty, conformal prediction, abstention, provenance, structured evidence, and auditable computation.</p></div>
+          <div><h3>Reinforcement Learning &amp; Control</h3><p>Deep reinforcement learning, state-space modeling, system identification, observers, fault detection, cyber-physical systems, robust control, and energy optimization.</p></div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="research">
+    <section class="section alt" id="publications">
       <div class="wrap">
         <div class="research-heading">
           <div>
-            <p class="kicker">Research</p>
+            <p class="kicker">Research record</p>
             <h2>Selected publications</h2>
           </div>
-          <p>I am an author or co-author of 14 peer-reviewed journal and conference publications spanning trustworthy AI, reinforcement learning, and control systems.</p>
+          <p>I am an author or co-author of 14 peer-reviewed journal and conference publications spanning trustworthy AI, reinforcement learning, cyber-physical systems, fault detection, control, and system identification.</p>
         </div>
         <div class="publication-grid">
           <article class="publication">
@@ -161,5 +239,27 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    const filterButtons = document.querySelectorAll(".filter-button");
+    const projectCards = document.querySelectorAll("#project-grid .card");
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
+
+        filterButtons.forEach((item) => {
+          const active = item === button;
+          item.classList.toggle("is-active", active);
+          item.setAttribute("aria-pressed", String(active));
+        });
+
+        projectCards.forEach((card) => {
+          const categories = card.dataset.categories.split(" ");
+          card.hidden = filter !== "all" && !categories.includes(filter);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
