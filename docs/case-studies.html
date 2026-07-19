@@ -3,20 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Selected applied AI and machine learning case studies by Arash Golabi">
-  <title>Case Studies | Arash Golabi</title>
+  <meta name="description" content="Applied AI, machine learning, reinforcement learning, and control engineering case studies by Arash">
+  <title>Case Studies | Arash</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="portfolio-filters.css">
 </head>
 <body>
   <nav class="nav" aria-label="Primary navigation">
     <div class="wrap nav-inner">
-      <a class="brand" href="index.html">Arash Golabi</a>
+      <a class="brand" href="index.html">Arash</a>
       <div class="nav-links">
         <a href="index.html#projects">Projects</a>
-        <a href="index.html#research">Research</a>
+        <a href="index.html#research-control">Research &amp; Control</a>
+        <a href="index.html#publications">Publications</a>
         <a href="resume.html">Résumé</a>
         <a href="index.html#contact">Contact</a>
       </div>
@@ -26,13 +28,18 @@
   <header class="page-header">
     <div class="wrap">
       <p class="kicker">Engineering case studies</p>
-      <h1>Private code, public engineering decisions.</h1>
-      <p class="lead">These summaries explain the problem framing, system design, and practical result of each project without sending recruiters to private repositories.</p>
+      <h1>Public engineering decisions, even when code must remain private.</h1>
+      <p class="lead">These summaries explain problem framing, system design, evaluation, and research contributions without exposing unpublished methods, restricted datasets, or collaborator-owned code.</p>
     </div>
   </header>
 
   <main class="section">
     <div class="wrap case-list">
+      <div class="case-section-heading">
+        <p class="kicker">AI, ML, MLOps &amp; agents</p>
+        <h2>Engineering projects</h2>
+      </div>
+
       <article class="case-study" id="metrictrace">
         <span class="tag">Reliable AI</span>
         <h2>MetricTrace</h2>
@@ -42,8 +49,8 @@
         </div>
         <div class="case-grid">
           <div><h3>Problem</h3><p>When an LLM performs both calculation and explanation, results are harder to reproduce, validate, and audit.</p></div>
-          <div><h3>My contribution</h3><p>Designed the typed schemas, calculation boundary, structured evidence model, CLI and Streamlit delivery paths, and optional grounded explanation layer.</p></div>
-          <div><h3>Result</h3><p>A single deterministic computation layer supports both CLI and Streamlit through one validated JSON contract, eliminating duplicated metric logic and keeping results consistent across interfaces.</p></div>
+          <div><h3>My contribution</h3><p>Designed typed schemas, the deterministic calculation boundary, structured evidence, CLI and Streamlit delivery paths, and an optional grounded explanation layer.</p></div>
+          <div><h3>Engineering result</h3><p>One validated computation engine supports multiple interfaces through a stable JSON contract, avoiding duplicated metric logic.</p></div>
         </div>
         <div class="stack">Python · Pydantic · LangChain · Streamlit · CLI · pytest</div>
       </article>
@@ -58,7 +65,7 @@
         <div class="case-grid">
           <div><h3>Problem</h3><p>Random validation and accuracy-only reporting can hide temporal leakage, minority-class failure, and changes in production data.</p></div>
           <div><h3>My contribution</h3><p>Connected temporal validation, LightGBM and XGBoost experiments, calibration, conformal prediction, MLflow tracking, orchestration, API serving, and deployment components.</p></div>
-          <div><h3>Result</h3><p>Three operational layers—data, modeling, and serving—are represented in one reproducible platform workflow.</p></div>
+          <div><h3>Engineering result</h3><p>Data preparation, modeling, evaluation, monitoring, and serving are represented in one reproducible platform workflow.</p></div>
         </div>
         <div class="stack">LightGBM · XGBoost · Airflow · MLflow · FastAPI · PostgreSQL · Docker</div>
       </article>
@@ -73,7 +80,7 @@
         <div class="case-grid">
           <div><h3>Problem</h3><p>Retrieval quality varies by query, document structure, and evidence density; one search strategy is not consistently sufficient.</p></div>
           <div><h3>My contribution</h3><p>Implemented dense, sparse, hybrid, MMR, multi-query, and parent-document retrieval with reranking, evidence checks, corrective routing, citations, guardrails, and traces.</p></div>
-          <div><h3>Result</h3><p>Six retrieval strategies can be examined through one evaluation and observability workflow.</p></div>
+          <div><h3>Engineering result</h3><p>Retrieval strategies can be compared through one evaluation and observability workflow with explicit weak-evidence handling.</p></div>
         </div>
         <div class="stack">LangChain · Qdrant · BM25 · Reranking · Phoenix · Guardrails</div>
       </article>
@@ -84,8 +91,21 @@
         <div class="case-grid">
           <div><h3>Problem</h3><p>IT support knowledge is often fragmented across structured records and internal documents that should remain local.</p></div>
           <div><h3>My contribution</h3><p>Built multi-source retrieval over CSV, SQLite, and PDF content with Chroma, local Ollama inference, source-grounded answers, escalation behavior, tests, and CI.</p></div>
-          <div><h3>Result</h3><p>Three source formats are available through one privacy-aware help-desk interface without requiring hosted model inference.</p></div>
+          <div><h3>Engineering result</h3><p>Multiple source formats are available through one privacy-aware help-desk interface without hosted model inference.</p></div>
         </div>
+        <div class="stack">Ollama · Chroma · LangChain · Streamlit · GitHub Actions</div>
+      </article>
+
+      <article class="case-study" id="etl-pipeline">
+        <span class="tag">Data Engineering</span>
+        <h2>ETL Pipeline</h2>
+        <p class="case-note">A tested Airflow workflow for ingesting NASA APOD data into PostgreSQL with repeatable, idempotent behavior.</p>
+        <div class="case-grid">
+          <div><h3>Problem</h3><p>Scheduled API ingestion must handle validation, reruns, duplicate prevention, and database reliability rather than only moving data once.</p></div>
+          <div><h3>My contribution</h3><p>Implemented the Airflow DAG, API extraction, record validation, PostgreSQL loading, idempotent upserts, local container setup, tests, and CI checks.</p></div>
+          <div><h3>Engineering result</h3><p>The pipeline can be rerun safely while preserving a consistent destination table and testable data-contract behavior.</p></div>
+        </div>
+        <div class="stack">Apache Airflow · Astro · PostgreSQL · Docker · pytest · GitHub Actions</div>
       </article>
 
       <article class="case-study" id="chest-xray">
@@ -94,8 +114,21 @@
         <div class="case-grid">
           <div><h3>Problem</h3><p>Medical-image experiments require patient-level separation, imbalance-aware training, and interpretable evaluation.</p></div>
           <div><h3>My contribution</h3><p>Developed a configuration-driven DenseNet121 workflow with patient-disjoint validation, class-imbalance handling, MLflow, AUROC reporting, GradCAM, and tests.</p></div>
-          <div><h3>Result</h3><p>Training, tracking, quantitative evaluation, and visual explanation are integrated in one reproducible pipeline.</p></div>
+          <div><h3>Engineering result</h3><p>Training, experiment tracking, quantitative evaluation, and visual explanation are integrated in one reproducible pipeline.</p></div>
         </div>
+        <div class="stack">PyTorch · DenseNet121 · MLflow · AUROC · GradCAM</div>
+      </article>
+
+      <article class="case-study" id="reflexion-agent">
+        <span class="tag">AI Agents</span>
+        <h2>Reflexion Agent</h2>
+        <p class="case-note">A bounded LangGraph workflow that drafts, critiques, researches, and revises answers while preserving structured state.</p>
+        <div class="case-grid">
+          <div><h3>Problem</h3><p>Unbounded self-reflection can increase cost and complexity without guaranteeing better evidence or a clear stopping condition.</p></div>
+          <div><h3>My contribution</h3><p>Designed explicit graph nodes, iteration limits, Pydantic state, search and revision tools, citation URL checks, retries, and node-level tests.</p></div>
+          <div><h3>Engineering result</h3><p>The agent follows a controlled improvement loop that is observable, testable, and easier to debug than an open-ended autonomous process.</p></div>
+        </div>
+        <div class="stack">LangGraph · Pydantic · Tool Calling · Validation · pytest</div>
       </article>
 
       <article class="case-study" id="cyber-graphrag">
@@ -104,12 +137,82 @@
         <div class="case-grid">
           <div><h3>Problem</h3><p>Cybersecurity papers contain relationships and evidence that are difficult to recover through flat keyword search alone.</p></div>
           <div><h3>My contribution</h3><p>Combined Neo4j ingestion, graph context, semantic embeddings, vector search, local Ollama generation, and source-aware response construction.</p></div>
-          <div><h3>Result</h3><p>Generated answers retain page-level citations so readers can return to the supporting research evidence.</p></div>
+          <div><h3>Engineering result</h3><p>Generated answers retain page-level citations so readers can return to the supporting research evidence.</p></div>
         </div>
+        <div class="stack">Neo4j · GraphRAG · Ollama · Sentence Transformers</div>
+      </article>
+
+      <article class="case-study" id="techrag-local">
+        <span class="tag">Local AI</span>
+        <h2>TechRAG Local</h2>
+        <p class="case-note">A local PDF RAG application with both browser and API interfaces, retrieval evaluation, and operational safeguards.</p>
+        <div class="case-grid">
+          <div><h3>Problem</h3><p>Local document assistants still require safe uploads, clear citations, latency visibility, and repeatable evaluation to be useful beyond a demo.</p></div>
+          <div><h3>My contribution</h3><p>Implemented PDF ingestion, local embeddings and generation, Streamlit and FastAPI interfaces, source citations, upload safeguards, evaluation utilities, tests, and CI.</p></div>
+          <div><h3>Engineering result</h3><p>The same retrieval core supports interactive and API use while reporting evidence and operational behavior explicitly.</p></div>
+        </div>
+        <div class="stack">PyMuPDF · Ollama · Embeddings · Streamlit · FastAPI · CI</div>
+      </article>
+
+      <div class="case-section-heading">
+        <p class="kicker">Reinforcement learning &amp; control</p>
+        <h2>Publication-backed research</h2>
+      </div>
+
+      <article class="case-study" id="rl-desalination">
+        <span class="tag">Reinforcement Learning</span>
+        <h2>RL-Based Desalination Control</h2>
+        <p class="case-note">Deep reinforcement-learning methods for energy-aware operation of reverse-osmosis desalination processes under changing conditions.</p>
+        <div class="case-grid">
+          <div><h3>Control problem</h3><p>Desalination operation must coordinate production, storage, demand, energy use, and process constraints over time.</p></div>
+          <div><h3>Research contribution</h3><p>Developed and evaluated learning-based operational strategies that connect sequential decision-making with the dynamics and constraints of the desalination process.</p></div>
+          <div><h3>Evidence</h3><p>The published study reports the formulation, controller design, comparative experiments, and energy-aware operational results.</p></div>
+        </div>
+        <div class="stack">Deep Reinforcement Learning · Process Control · Energy Optimization · Dynamic Systems</div>
+        <div class="research-actions"><a class="button secondary" href="https://doi.org/10.1007/s10489-024-05452-8" target="_blank" rel="noreferrer">View publication</a></div>
+      </article>
+
+      <article class="case-study" id="hardware-trojan">
+        <span class="tag">AI Security</span>
+        <h2>Hardware Trojan Detection</h2>
+        <p class="case-note">A dual-stage deep-learning framework for detection and identification of hardware Trojans with uncertainty information from Monte Carlo dropout.</p>
+        <div class="case-grid">
+          <div><h3>Security problem</h3><p>Hardware Trojan detection must distinguish normal behavior from multiple attack classes under measurement variation and class overlap.</p></div>
+          <div><h3>Research contribution</h3><p>Combined representation learning, staged classification, and uncertainty-aware inference for robust detection and attack identification.</p></div>
+          <div><h3>Evidence</h3><p>The publication presents the model design, experimental protocol, comparative results, and uncertainty analysis.</p></div>
+        </div>
+        <div class="stack">Deep Learning · Monte Carlo Dropout · Uncertainty · Hardware Security</div>
+        <div class="research-actions"><a class="button secondary" href="https://doi.org/10.1007/s10207-025-01049-5" target="_blank" rel="noreferrer">View publication</a></div>
+      </article>
+
+      <article class="case-study" id="lpv-identification">
+        <span class="tag">System Identification</span>
+        <h2>Bayesian LPV Model Identification</h2>
+        <p class="case-note">A Bayesian approach for identifying linear parameter-varying models of complex processes for analysis and control.</p>
+        <div class="case-grid">
+          <div><h3>Modeling problem</h3><p>Complex processes change with operating conditions, making one fixed linear model insufficient across the full regime.</p></div>
+          <div><h3>Research contribution</h3><p>Developed a Bayesian LPV identification framework to estimate parameter-varying dynamic models while representing uncertainty in the identified system.</p></div>
+          <div><h3>Control relevance</h3><p>The resulting models support control-oriented analysis across operating conditions and demonstrate a direct bridge between data-driven estimation and control engineering.</p></div>
+        </div>
+        <div class="stack">LPV Systems · Bayesian Estimation · State-Space Models · System Identification</div>
+        <div class="research-actions"><a class="button secondary" href="https://doi.org/10.1109/TCST.2016.2642159" target="_blank" rel="noreferrer">View publication</a></div>
+      </article>
+
+      <article class="case-study" id="cps-security">
+        <span class="tag">Cyber-Physical Systems</span>
+        <h2>Attack and Fault Detection</h2>
+        <p class="case-note">Observer- and residual-based methods for detecting and isolating abnormal behavior in nonlinear cyber-physical systems.</p>
+        <div class="case-grid">
+          <div><h3>System problem</h3><p>Attacks, faults, disturbances, and measurement noise can produce similar symptoms, making reliable detection and isolation difficult.</p></div>
+          <div><h3>Research contribution</h3><p>Designed nonlinear observers, residual generators, thresholds, and evaluation scenarios for fault detection, attack detection, and isolation under uncertainty.</p></div>
+          <div><h3>Engineering relevance</h3><p>The work combines state estimation, robust control concepts, security modeling, and quantitative detection metrics for safety-critical dynamic systems.</p></div>
+        </div>
+        <div class="stack">Nonlinear Observers · Residual Analysis · Fault Isolation · Robust Control · CPS Security</div>
+        <div class="research-actions"><a class="button secondary" href="https://scholar.google.com/citations?hl=en&amp;user=JTtQ114AAAAJ" target="_blank" rel="noreferrer">View related publications</a></div>
       </article>
 
       <div class="actions">
-        <a class="button primary" href="mailto:arash.golabi@gmail.com?subject=Technical%20project%20walkthrough">Request a technical walkthrough</a>
+        <a class="button primary" href="mailto:arash.shm62@gmail.com?subject=Technical%20project%20walkthrough">Request a technical walkthrough</a>
         <a class="button secondary" href="index.html#projects">Back to portfolio</a>
       </div>
     </div>
@@ -117,8 +220,8 @@
 
   <footer>
     <div class="wrap footer-inner">
-      <div><strong>Arash Golabi</strong><span>Applied AI &amp; Machine Learning Engineer</span></div>
-      <a href="mailto:arash.golabi@gmail.com">arash.golabi@gmail.com</a>
+      <div><strong>Arash</strong><span>Applied AI &amp; Machine Learning Engineer</span></div>
+      <a href="mailto:arash.shm62@gmail.com">arash.shm62@gmail.com</a>
     </div>
   </footer>
 </body>
