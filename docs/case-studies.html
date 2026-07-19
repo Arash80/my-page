@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Applied AI, machine learning, reinforcement learning, and control engineering case studies by Arash">
+  <meta name="description" content="Applied AI, machine learning, robotics, reinforcement learning, and control engineering case studies by Arash">
   <title>Case Studies | Arash</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
       <a class="brand" href="index.html">Arash</a>
       <div class="nav-links">
         <a href="index.html#projects">Projects</a>
-        <a href="index.html#research-control">Research &amp; Control</a>
+        <a href="index.html#research-control">Robotics &amp; Control</a>
         <a href="index.html#publications">Publications</a>
         <a href="resume.html">Résumé</a>
         <a href="index.html#contact">Contact</a>
@@ -152,6 +152,41 @@
           <div><h3>Engineering result</h3><p>The same retrieval core supports interactive and API use while reporting evidence and operational behavior explicitly.</p></div>
         </div>
         <div class="stack">PyMuPDF · Ollama · Embeddings · Streamlit · FastAPI · CI</div>
+      </article>
+
+      <div class="case-section-heading">
+        <p class="kicker">Robotics &amp; MATLAB engineering</p>
+        <h2>Planning and robot dynamics</h2>
+      </div>
+
+      <article class="case-study" id="prm-planner">
+        <span class="tag">Robotics &amp; Planning</span>
+        <h2>Probabilistic Roadmap Planner</h2>
+        <p class="case-note">A reusable MATLAB implementation of two-dimensional probabilistic-roadmap planning around circular obstacles.</p>
+        <div class="case-architecture" aria-label="Probabilistic roadmap planner architecture diagram">
+          <span>Start · Goal · Obstacles</span><i>→</i><span>Deterministic sampling</span><i>→</i><span>Collision-free roadmap</span><i>→</i><span>Shortest path · Plot</span>
+        </div>
+        <div class="case-grid">
+          <div><h3>Planning problem</h3><p>Sampling-based path planning must balance roadmap connectivity, collision safety, reproducibility, and clear failure behavior.</p></div>
+          <div><h3>My contribution</h3><p>Separated the planner from the legacy GUI and implemented configurable sampling, exact point-to-segment obstacle checks, weighted graph construction, shortest-path search, clearance handling, deterministic seeds, and bounded retries.</p></div>
+          <div><h3>Engineering result</h3><p>The reusable API supports custom bounds and obstacles and is covered by MATLAB unit tests for endpoint correctness, reproducibility, invalid starts, and obstacle-free planning.</p></div>
+        </div>
+        <div class="stack">MATLAB · Probabilistic Roadmaps · Collision Detection · Graph Search · Unit Testing</div>
+      </article>
+
+      <article class="case-study" id="two-link-robot">
+        <span class="tag">Robot Control</span>
+        <h2>Two-Link Robot Position Control</h2>
+        <p class="case-note">A MATLAB/Simulink model of a planar two-link manipulator with inverse kinematics, nonlinear dynamics, motor parameters, and animated visualization.</p>
+        <div class="case-architecture" aria-label="Two-link robot control architecture diagram">
+          <span>Desired position</span><i>→</i><span>Inverse kinematics</span><i>→</i><span>Motor &amp; manipulator dynamics</span><i>→</i><span>Joint motion · Animation</span>
+        </div>
+        <div class="case-grid">
+          <div><h3>Control problem</h3><p>End-effector positioning requires converting Cartesian targets into joint references while accounting for coupled inertia, gravity, damping, motor gains, and gear ratios.</p></div>
+          <div><h3>My contribution</h3><p>Organized the Simulink model, initialization workflow, inverse-kinematics S-function, nonlinear manipulator-dynamics S-function, physical parameters, and animated display into a portable repository structure.</p></div>
+          <div><h3>Engineering status</h3><p>The project preserves a legacy MDL and MATLAB S-function implementation with documented setup and archived historical files. It demonstrates modeling depth while remaining clearly identified as a legacy simulation project.</p></div>
+        </div>
+        <div class="stack">MATLAB/Simulink · Inverse Kinematics · Nonlinear Robot Dynamics · DC Motors · Visualization</div>
       </article>
 
       <div class="case-section-heading">
