@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Arash — Applied AI, machine learning, reinforcement learning, and control engineering portfolio">
-  <title>Arash | Applied AI, ML &amp; Intelligent Control</title>
+  <meta name="description" content="Arash — Applied AI, machine learning, robotics, reinforcement learning, and control engineering portfolio">
+  <title>Arash | Applied AI, ML, Robotics &amp; Intelligent Control</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
       <a class="brand" href="#top">Arash</a>
       <div class="nav-links">
         <a href="#projects">Projects</a>
-        <a href="#research-control">Research &amp; Control</a>
+        <a href="#research-control">Robotics &amp; Control</a>
         <a href="#skills">Skills</a>
         <a href="#publications">Publications</a>
         <a href="resume.html">Résumé</a>
@@ -29,9 +29,9 @@
   <header class="hero" id="top">
     <div class="wrap hero-grid">
       <div>
-        <p class="kicker">Applied AI · Machine Learning · Reinforcement Learning · Control</p>
+        <p class="kicker">Applied AI · Machine Learning · Robotics · Reinforcement Learning · Control</p>
         <h1>Building reliable AI and intelligent control systems from research to deployment.</h1>
-        <p class="lead">I am an Applied AI and Machine Learning Engineer with a strong control-engineering background. I build production-oriented ML systems, agentic AI applications, trustworthy AI tools, and learning-based solutions for dynamic and cyber-physical systems.</p>
+        <p class="lead">I am an Applied AI and Machine Learning Engineer with a strong control-engineering background. I build production-oriented ML systems, agentic AI applications, trustworthy AI tools, and learning-based solutions for robotics, dynamic systems, and cyber-physical systems.</p>
         <div class="actions">
           <a class="button primary" href="#projects">View projects</a>
           <a class="button secondary" href="resume.html">View résumé</a>
@@ -44,7 +44,7 @@
         <div>
           <strong>Arash</strong>
           <span>Applied AI &amp; ML Engineer</span>
-          <span>ML · RL · Intelligent Control</span>
+          <span>ML · Robotics · RL · Intelligent Control</span>
           <span>Montreal, Canada</span>
         </div>
       </aside>
@@ -55,8 +55,8 @@
     <section class="section" id="projects">
       <div class="wrap">
         <p class="kicker">Engineering portfolio</p>
-        <h2>Selected projects</h2>
-        <p class="section-intro">A broader selection of production ML, MLOps, agentic AI, local AI, deep learning, and knowledge-system projects. Use the filters to focus on the work most relevant to a role.</p>
+        <h2>Selected AI and data projects</h2>
+        <p class="section-intro">Production ML, MLOps, agentic AI, local AI, deep learning, and knowledge-system projects. Use the filters to focus on the work most relevant to a role.</p>
 
         <div class="project-filters" role="group" aria-label="Filter projects">
           <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All</button>
@@ -144,11 +144,27 @@
 
     <section class="section alt" id="research-control">
       <div class="wrap">
-        <p class="kicker">Research &amp; control engineering</p>
-        <h2>Learning, estimation, security, and control</h2>
-        <p class="section-intro">Publication-backed work that demonstrates my control-engineering foundation without requiring unpublished or collaborator-owned source code to be public.</p>
+        <p class="kicker">Robotics, reinforcement learning &amp; control</p>
+        <h2>Planning, dynamics, estimation, security, and control</h2>
+        <p class="section-intro">A focused selection of code-based MATLAB robotics projects and publication-backed research. This section shows my control-engineering foundation without overwhelming the AI/ML portfolio.</p>
 
         <div class="cards project-grid research-project-grid">
+          <article class="card">
+            <span class="tag">Robotics &amp; Planning</span>
+            <h3>Probabilistic Roadmap Planner</h3>
+            <p>Reusable 2-D PRM planner with deterministic sampling, exact obstacle collision checks, weighted graph construction, shortest-path search, bounded retries, visualization, and unit tests.</p>
+            <div class="stack">MATLAB · Motion Planning · Graph Search · Unit Testing</div>
+            <a href="case-studies.html#prm-planner">Read case study →</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">Robot Control</span>
+            <h3>Two-Link Robot Position Control</h3>
+            <p>MATLAB/Simulink model combining inverse kinematics, coupled manipulator dynamics, DC motor parameters, position-control simulation, and animated visualization.</p>
+            <div class="stack">MATLAB/Simulink · Inverse Kinematics · Robot Dynamics</div>
+            <a href="case-studies.html#two-link-robot">Read case study →</a>
+          </article>
+
           <article class="card">
             <span class="tag">Reinforcement Learning</span>
             <h3>RL-Based Desalination Control</h3>
@@ -192,7 +208,7 @@
           <div><h3>Machine Learning</h3><p>PyTorch, scikit-learn, LightGBM, XGBoost, pandas, NumPy, model calibration, temporal validation, imbalanced learning, and rigorous evaluation.</p></div>
           <div><h3>GenAI &amp; Agents</h3><p>LangChain, LangGraph, LCEL, Hugging Face, Ollama, Qdrant, Chroma, FAISS, Neo4j, GraphRAG, hybrid retrieval, reranking, and guardrails.</p></div>
           <div><h3>MLOps &amp; Data</h3><p>MLflow, Airflow, FastAPI, Docker, PostgreSQL, dbt, GitHub Actions, pytest, Ruff, mypy, configuration-driven pipelines, and reproducibility.</p></div>
-          <div><h3>Reinforcement Learning &amp; Control</h3><p>Deep reinforcement learning, state-space modeling, system identification, observers, fault detection, cyber-physical systems, robust control, and energy optimization.</p></div>
+          <div><h3>Robotics, RL &amp; Control</h3><p>Motion planning, robot kinematics and dynamics, MATLAB/Simulink, deep reinforcement learning, state-space modeling, system identification, observers, fault detection, cyber-physical systems, and robust control.</p></div>
         </div>
       </div>
     </section>
