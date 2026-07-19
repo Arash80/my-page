@@ -98,7 +98,7 @@ h3 { margin: 0 0 12px; font-size: 1.2rem; }
 .footer-links { display: flex !important; grid-auto-flow: column; gap: 22px !important; }
 
 .page-header { padding: 82px 0 58px; border-bottom: 1px solid var(--line); background: radial-gradient(circle at 15% 20%, rgba(114,164,255,.14), transparent 38%); }
-.page-header h1 { max-width: 860px; font-size: clamp(2.5rem, 6vw, 4.6rem); }
+.page-header h1 { max-width: 860px; font-size: clamp(2.5rem, 6vw, 3.6rem); }
 .page-header .lead { max-width: 760px; }
 .case-list { display: grid; gap: 28px; }
 .case-study { scroll-margin-top: 92px; padding: 34px; border: 1px solid var(--line); border-radius: 20px; background: var(--panel); }
