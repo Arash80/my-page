@@ -3,21 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Arash Golabi — Applied AI and Machine Learning Engineer portfolio">
-  <title>Arash | Applied AI & Machine Learning Engineer</title>
+  <meta name="description" content="Arash — Applied AI and Machine Learning Engineer portfolio">
+  <title>Arash | Applied AI &amp; Machine Learning Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="nav">
+  <nav class="nav" aria-label="Primary navigation">
     <div class="wrap nav-inner">
       <a class="brand" href="#top">Arash</a>
       <div class="nav-links">
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#research">Research</a>
+        <a href="resume.html">Résumé</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
@@ -28,18 +29,19 @@
       <div>
         <p class="kicker">Applied AI · Machine Learning · Research Engineering</p>
         <h1>Building reliable AI systems from research to deployment.</h1>
-        <p class="lead">I am an Applied AI and Machine Learning Engineer based in Montreal. I build production-oriented ML systems, agentic RAG applications, trustworthy AI tools, and research-driven solutions in adversarial AI, reinforcement learning, and distributed intelligence.</p>
+        <p class="lead">I am an Applied AI and Machine Learning Engineer. I build production-oriented ML systems, agentic RAG applications, trustworthy AI tools, and research-driven solutions in adversarial AI, reinforcement learning, and distributed intelligence.</p>
         <div class="actions">
           <a class="button primary" href="#projects">View projects</a>
+          <a class="button secondary" href="resume.html">View résumé</a>
           <a class="button secondary" href="mailto:arash.shm62@gmail.com">Contact me</a>
           <a class="button secondary" href="https://github.com/Arash80" target="_blank" rel="noreferrer">GitHub</a>
         </div>
       </div>
       <aside class="hero-card">
-        <img src="https://avatars.githubusercontent.com/u/20566834?v=4" alt="Arash Golabi">
+        <img src="https://avatars.githubusercontent.com/u/20566834?v=4" alt="Portrait of Arash Golabi">
         <div>
           <strong>Arash</strong>
-          <span>Applied AI & ML Engineer</span>
+          <span>Applied AI &amp; ML Engineer</span>
           <span>Montreal, Canada</span>
         </div>
       </aside>
@@ -51,56 +53,55 @@
       <div class="wrap">
         <p class="kicker">Selected work</p>
         <h2>Featured projects</h2>
-        <div class="cards">
+        <p class="section-intro">Selected AI and machine-learning systems spanning reliable computation, MLOps, retrieval, deep learning, and knowledge graphs.</p>
+
+        <div class="cards project-grid">
           <article class="card">
             <span class="tag">Reliable AI</span>
             <h3>MetricTrace</h3>
-            <p>Auditable metric-computation engine with deterministic Python calculations, strict Pydantic schemas, stable JSON contracts, Streamlit, CLI workflows, and optional grounded LangChain explanations.</p>
+            <p>Auditable metric-computation system that separates deterministic calculations from optional LLM-generated explanations.</p>
             <div class="stack">Python · Pydantic · LangChain · Streamlit · pytest</div>
-            <a href="https://github.com/Arash80/metric_trace" target="_blank" rel="noreferrer">Repository →</a>
+            <a href="case-studies.html#metrictrace" aria-label="Read the MetricTrace case study">Read case study →</a>
           </article>
 
           <article class="card">
             <span class="tag">MLOps</span>
             <h3>Fraud ML Platform</h3>
-            <p>Production-oriented fraud detection platform with temporal validation, LightGBM/XGBoost, calibration, conformal prediction, drift analysis, Airflow, MLflow, FastAPI, dbt, PostgreSQL, Docker, and AWS deployment work.</p>
+            <p>Production-oriented fraud-detection platform with temporal validation, calibrated models, experiment tracking, drift analysis, orchestration, and API deployment.</p>
             <div class="stack">LightGBM · XGBoost · Airflow · MLflow · FastAPI</div>
-            <a href="https://github.com/Arash80/fraud-ml-platform" target="_blank" rel="noreferrer">Repository →</a>
+            <a href="case-studies.html#fraud-platform" aria-label="Read the Fraud ML Platform case study">Read case study →</a>
           </article>
 
           <article class="card">
             <span class="tag">Agentic AI</span>
             <h3>Advanced Agentic RAG</h3>
-            <p>Document-intelligence system comparing dense, sparse, hybrid, MMR, multi-query, and parent-document retrieval with reranking, evidence sufficiency checks, corrective routing, citations, guardrails, tracing, and evaluation.</p>
+            <p>Evaluation-oriented document-intelligence system with hybrid retrieval, reranking, evidence checks, corrective routing, citations, guardrails, and tracing.</p>
             <div class="stack">LangChain · Qdrant · BM25 · Reranking · Phoenix</div>
-            <a href="https://github.com/Arash80/Agentic-RAG-System" target="_blank" rel="noreferrer">Repository →</a>
+            <a href="case-studies.html#agentic-rag" aria-label="Read the Advanced Agentic RAG case study">Read case study →</a>
           </article>
 
           <article class="card">
             <span class="tag">Local RAG</span>
             <h3>DeskPilot</h3>
-            <p>Privacy-aware IT help-desk assistant using multi-source retrieval over CSV, SQLite, and PDF knowledge bases, local Ollama inference, source-grounded answers, security-aware escalation, Streamlit, tests, and CI.</p>
-            <div class="stack">Ollama · Chroma · LangChain · Streamlit · GitHub Actions</div>
-            <a href="https://github.com/Arash80/deskpilot-it-helpdesk" target="_blank" rel="noreferrer">Repository →</a>
+            <p>Privacy-aware IT help-desk assistant with local inference and retrieval across CSV, SQLite, and PDF knowledge sources.</p>
+            <div class="stack">Ollama · Chroma · LangChain · Streamlit</div>
+            <a href="case-studies.html#deskpilot" aria-label="Read the DeskPilot case study">Read case study →</a>
           </article>
-
           <article class="card">
             <span class="tag">Deep Learning</span>
             <h3>Chest X-Ray Diagnosis</h3>
-            <p>End-to-end multi-label chest X-ray classification with DenseNet121, patient-disjoint validation, class-imbalance handling, MLflow tracking, AUROC evaluation, GradCAM explanations, YAML configuration, and tests.</p>
+            <p>Multi-label DenseNet121 workflow with patient-disjoint validation, AUROC evaluation, experiment tracking, and GradCAM explanations.</p>
             <div class="stack">PyTorch · DenseNet121 · MLflow · GradCAM</div>
-            <a href="https://github.com/Arash80/chest-xray-diagnosis" target="_blank" rel="noreferrer">Repository →</a>
+            <a href="case-studies.html#chest-xray" aria-label="Read the Chest X-Ray Diagnosis case study">Read case study →</a>
           </article>
-
           <article class="card">
             <span class="tag">Knowledge Graphs</span>
             <h3>CyberGraphRAG</h3>
-            <p>Local GraphRAG platform for cybersecurity research PDFs with Neo4j ingestion, semantic embeddings, vector search, graph context, Ollama generation, and source citations.</p>
-            <div class="stack">Neo4j · GraphRAG · Ollama · Sentence Transformers</div>
-            <a href="https://github.com/Arash80/cyber-graphrag" target="_blank" rel="noreferrer">Repository →</a>
+            <p>Local cybersecurity research assistant combining Neo4j graph context, semantic retrieval, generation, and page-level citations.</p>
+            <div class="stack">Neo4j · GraphRAG · Ollama · Embeddings</div>
+            <a href="case-studies.html#cyber-graphrag" aria-label="Read the CyberGraphRAG case study">Read case study →</a>
           </article>
         </div>
-        <p class="note">Some repositories may remain private while publication, dataset, licensing, or intellectual-property reviews are completed.</p>
       </div>
     </section>
 
@@ -110,24 +111,42 @@
         <h2>Technical focus</h2>
         <div class="skill-grid">
           <div><h3>Machine Learning</h3><p>PyTorch, scikit-learn, LightGBM, XGBoost, pandas, NumPy, model calibration, temporal validation, imbalanced learning, and rigorous evaluation.</p></div>
-          <div><h3>GenAI & RAG</h3><p>LangChain, LangGraph, LCEL, Hugging Face, Ollama, Qdrant, Chroma, FAISS, Neo4j, GraphRAG, hybrid retrieval, reranking, and guardrails.</p></div>
-          <div><h3>MLOps & Data</h3><p>MLflow, Airflow, FastAPI, Docker, PostgreSQL, dbt, GitHub Actions, pytest, Ruff, mypy, configuration-driven pipelines, and reproducibility.</p></div>
+          <div><h3>GenAI &amp; RAG</h3><p>LangChain, LangGraph, LCEL, Hugging Face, Ollama, Qdrant, Chroma, FAISS, Neo4j, GraphRAG, hybrid retrieval, reranking, and guardrails.</p></div>
+          <div><h3>MLOps &amp; Data</h3><p>MLflow, Airflow, FastAPI, Docker, PostgreSQL, dbt, GitHub Actions, pytest, Ruff, mypy, configuration-driven pipelines, and reproducibility.</p></div>
           <div><h3>Trustworthy AI</h3><p>Adversarial ML, anomaly detection, robust evaluation, uncertainty, conformal prediction, abstention, provenance, structured evidence, and auditable computation.</p></div>
         </div>
       </div>
     </section>
 
     <section class="section" id="research">
-      <div class="wrap two-col">
-        <div>
-          <p class="kicker">Research</p>
-          <h2>Research-backed engineering</h2>
-          <p>I am an author or co-author of 14 peer-reviewed journal and conference publications spanning distributed AI security, Hardware Trojan detection, reinforcement-learning-based energy optimization, cyber-physical-system security, fault detection, control, and system identification.</p>
+      <div class="wrap">
+        <div class="research-heading">
+          <div>
+            <p class="kicker">Research</p>
+            <h2>Selected publications</h2>
+          </div>
+          <p>I am an author or co-author of 14 peer-reviewed journal and conference publications spanning trustworthy AI, reinforcement learning, and control systems.</p>
         </div>
-        <div class="research-links">
-          <a href="https://scholar.google.com/citations?hl=en&user=JTtQ114AAAAJ" target="_blank" rel="noreferrer">Google Scholar →</a>
-          <a href="https://github.com/Arash80" target="_blank" rel="noreferrer">GitHub profile →</a>
-          <a href="mailto:arash.golabi@gmail.com">Email →</a>
+        <div class="publication-grid">
+          <article class="publication">
+            <span>2025 · International Journal of Information Security</span>
+            <h3>A dual-stage deep learning approach for robust detection and identification of hardware trojans using Monte-Carlo dropout</h3>
+            <a href="https://doi.org/10.1007/s10207-025-01049-5" target="_blank" rel="noreferrer">View paper →</a>
+          </article>
+          <article class="publication">
+            <span>2024 · Applied Intelligence</span>
+            <h3>Optimal operation of reverse osmosis desalination process with deep reinforcement learning methods</h3>
+            <a href="https://doi.org/10.1007/s10489-024-05452-8" target="_blank" rel="noreferrer">View paper →</a>
+          </article>
+          <article class="publication">
+            <span>2017 · IEEE Transactions on Control Systems Technology</span>
+            <h3>A Bayesian Approach for LPV Model Identification and Its Application to Complex Processes</h3>
+            <a href="https://doi.org/10.1109/TCST.2016.2642159" target="_blank" rel="noreferrer">View paper →</a>
+          </article>
+        </div>
+        <div class="research-actions">
+          <a class="button secondary" href="https://scholar.google.com/citations?hl=en&amp;user=JTtQ114AAAAJ" target="_blank" rel="noreferrer">View Google Scholar</a>
+          <a class="button secondary" href="https://dblp.org/pid/158/4994" target="_blank" rel="noreferrer">View DBLP</a>
         </div>
       </div>
     </section>
@@ -135,8 +154,11 @@
 
   <footer id="contact">
     <div class="wrap footer-inner">
-      <div><strong>Arash</strong><span>Applied AI & Machine Learning Engineer</span></div>
-      <a href="mailto:arash.golabi@gmail.com">arash.golabi@gmail.com</a>
+      <div><strong>Arash</strong><span>Applied AI &amp; Machine Learning Engineer</span></div>
+      <div class="footer-links">
+        <a href="mailto:arash.shm62@gmail.com">arash.shm62@gmail.com</a>
+        <a href="https://github.com/Arash80" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
     </div>
   </footer>
 </body>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Selected applied AI and machine learning case studies by Arash Golabi">
+  <title>Case Studies | Arash Golabi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html">Arash Golabi</a>
+      <div class="nav-links">
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#research">Research</a>
+        <a href="resume.html">Résumé</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="wrap">
+      <p class="kicker">Engineering case studies</p>
+      <h1>Private code, public engineering decisions.</h1>
+      <p class="lead">These summaries explain the problem framing, system design, and practical result of each project without sending recruiters to private repositories.</p>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="wrap case-list">
+      <article class="case-study" id="metrictrace">
+        <span class="tag">Reliable AI</span>
+        <h2>MetricTrace</h2>
+        <p class="case-note">An auditable metric-computation engine that keeps deterministic calculations separate from optional natural-language explanations.</p>
+        <div class="case-architecture" aria-label="MetricTrace architecture diagram">
+          <span>Raw inputs</span><i>→</i><span>Pydantic validation</span><i>→</i><span>Deterministic metrics</span><i>→</i><span>CLI · Streamlit · JSON</span>
+        </div>
+        <div class="case-grid">
+          <div><h3>Problem</h3><p>When an LLM performs both calculation and explanation, results are harder to reproduce, validate, and audit.</p></div>
+          <div><h3>My contribution</h3><p>Designed the typed schemas, calculation boundary, structured evidence model, CLI and Streamlit delivery paths, and optional grounded explanation layer.</p></div>
+          <div><h3>Result</h3><p>A single deterministic computation layer supports both CLI and Streamlit through one validated JSON contract, eliminating duplicated metric logic and keeping results consistent across interfaces.</p></div>
+        </div>
+        <div class="stack">Python · Pydantic · LangChain · Streamlit · CLI · pytest</div>
+      </article>
+
+      <article class="case-study" id="fraud-platform">
+        <span class="tag">MLOps</span>
+        <h2>Fraud ML Platform</h2>
+        <p class="case-note">A production-oriented fraud modeling workflow designed around time-aware evaluation, uncertainty, and operational monitoring.</p>
+        <div class="case-architecture" aria-label="Fraud ML Platform architecture diagram">
+          <span>Temporal data</span><i>→</i><span>Airflow · dbt</span><i>→</i><span>Models · Calibration</span><i>→</i><span>FastAPI · Drift</span>
+        </div>
+        <div class="case-grid">
+          <div><h3>Problem</h3><p>Random validation and accuracy-only reporting can hide temporal leakage, minority-class failure, and changes in production data.</p></div>
+          <div><h3>My contribution</h3><p>Connected temporal validation, LightGBM and XGBoost experiments, calibration, conformal prediction, MLflow tracking, orchestration, API serving, and deployment components.</p></div>
+          <div><h3>Result</h3><p>Three operational layers—data, modeling, and serving—are represented in one reproducible platform workflow.</p></div>
+        </div>
+        <div class="stack">LightGBM · XGBoost · Airflow · MLflow · FastAPI · PostgreSQL · Docker</div>
+      </article>
+
+      <article class="case-study" id="agentic-rag">
+        <span class="tag">Agentic AI</span>
+        <h2>Advanced Agentic RAG</h2>
+        <p class="case-note">A document-intelligence testbed for comparing retrieval strategies and routing weak-evidence questions through corrective steps.</p>
+        <div class="case-architecture" aria-label="Advanced Agentic RAG architecture diagram">
+          <span>User query</span><i>→</i><span>Retrieve · Rerank</span><i>→</i><span>Evidence gate</span><i>→</i><span>Answer · Citation · Trace</span>
+        </div>
+        <div class="case-grid">
+          <div><h3>Problem</h3><p>Retrieval quality varies by query, document structure, and evidence density; one search strategy is not consistently sufficient.</p></div>
+          <div><h3>My contribution</h3><p>Implemented dense, sparse, hybrid, MMR, multi-query, and parent-document retrieval with reranking, evidence checks, corrective routing, citations, guardrails, and traces.</p></div>
+          <div><h3>Result</h3><p>Six retrieval strategies can be examined through one evaluation and observability workflow.</p></div>
+        </div>
+        <div class="stack">LangChain · Qdrant · BM25 · Reranking · Phoenix · Guardrails</div>
+      </article>
+
+      <article class="case-study" id="deskpilot">
+        <span class="tag">Local RAG</span>
+        <h2>DeskPilot</h2>
+        <div class="case-grid">
+          <div><h3>Problem</h3><p>IT support knowledge is often fragmented across structured records and internal documents that should remain local.</p></div>
+          <div><h3>My contribution</h3><p>Built multi-source retrieval over CSV, SQLite, and PDF content with Chroma, local Ollama inference, source-grounded answers, escalation behavior, tests, and CI.</p></div>
+          <div><h3>Result</h3><p>Three source formats are available through one privacy-aware help-desk interface without requiring hosted model inference.</p></div>
+        </div>
+      </article>
+
+      <article class="case-study" id="chest-xray">
+        <span class="tag">Deep Learning</span>
+        <h2>Chest X-Ray Diagnosis</h2>
+        <div class="case-grid">
+          <div><h3>Problem</h3><p>Medical-image experiments require patient-level separation, imbalance-aware training, and interpretable evaluation.</p></div>
+          <div><h3>My contribution</h3><p>Developed a configuration-driven DenseNet121 workflow with patient-disjoint validation, class-imbalance handling, MLflow, AUROC reporting, GradCAM, and tests.</p></div>
+          <div><h3>Result</h3><p>Training, tracking, quantitative evaluation, and visual explanation are integrated in one reproducible pipeline.</p></div>
+        </div>
+      </article>
+
+      <article class="case-study" id="cyber-graphrag">
+        <span class="tag">Knowledge Graphs</span>
+        <h2>CyberGraphRAG</h2>
+        <div class="case-grid">
+          <div><h3>Problem</h3><p>Cybersecurity papers contain relationships and evidence that are difficult to recover through flat keyword search alone.</p></div>
+          <div><h3>My contribution</h3><p>Combined Neo4j ingestion, graph context, semantic embeddings, vector search, local Ollama generation, and source-aware response construction.</p></div>
+          <div><h3>Result</h3><p>Generated answers retain page-level citations so readers can return to the supporting research evidence.</p></div>
+        </div>
+      </article>
+
+      <div class="actions">
+        <a class="button primary" href="mailto:arash.golabi@gmail.com?subject=Technical%20project%20walkthrough">Request a technical walkthrough</a>
+        <a class="button secondary" href="index.html#projects">Back to portfolio</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div><strong>Arash Golabi</strong><span>Applied AI &amp; Machine Learning Engineer</span></div>
+      <a href="mailto:arash.golabi@gmail.com">arash.golabi@gmail.com</a>
+    </div>
+  </footer>
+</body>
+</html>
