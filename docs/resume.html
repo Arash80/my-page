@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Technical résumé of Arash Golabi, Applied AI and Machine Learning Engineer">
+  <meta name="description" content="Technical résumé of Arash Golabi, Applied AI, Machine Learning, and MLOps Engineer">
   <title>Résumé | Arash Golabi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,11 +15,12 @@
     <a class="button" href="index.html">← Portfolio</a>
     <button class="button" type="button" onclick="window.print()">Print / Save as PDF</button>
   </div>
+
   <main class="resume-shell">
     <header class="resume-header">
       <div>
         <h1>Arash Golabi</h1>
-        <p>Applied AI &amp; Machine Learning Engineer</p>
+        <p>Machine Learning, MLOps &amp; Applied AI Engineer</p>
         <p>Montreal, Canada</p>
       </div>
       <div class="resume-contact">
@@ -31,33 +32,77 @@
 
     <section class="resume-section">
       <h2>Professional profile</h2>
-      <p>Applied AI and machine learning engineer building production-oriented ML systems, agentic RAG applications, trustworthy AI tools, and research-driven solutions. Research background includes adversarial AI, reinforcement learning, distributed intelligence, fault detection, control, and system identification.</p>
+      <p>Machine learning, MLOps, and applied AI engineer with experience building production-oriented ML systems, deep-learning workflows, agentic RAG applications, and cloud-based model pipelines. Combines practical software engineering with a research background in reinforcement learning, adversarial AI, distributed intelligence, fault detection, robotics, and intelligent control.</p>
     </section>
 
     <section class="resume-section">
       <h2>Core expertise</h2>
-      <p><strong>Machine learning:</strong> PyTorch, scikit-learn, LightGBM, XGBoost, calibration, conformal prediction, temporal validation, imbalanced learning, explainability.</p>
-      <p><strong>GenAI and RAG:</strong> LangChain, LangGraph, Qdrant, Chroma, Neo4j, GraphRAG, hybrid retrieval, reranking, guardrails, local inference.</p>
-      <p><strong>MLOps and data:</strong> MLflow, Airflow, FastAPI, Docker, PostgreSQL, dbt, GitHub Actions, pytest, configuration-driven pipelines.</p>
+      <p><strong>Machine learning and deep learning:</strong> Python, PyTorch, scikit-learn, LightGBM, XGBoost, pandas, NumPy, feature engineering, temporal validation, imbalanced learning, calibration, conformal prediction, explainability, and rigorous evaluation.</p>
+      <p><strong>MLOps and cloud:</strong> MLflow, Airflow, FastAPI, Docker, PostgreSQL, GitHub Actions, pytest, AWS SageMaker AI, Amazon S3, IAM, CloudWatch, managed processing, training, evaluation, deployment, and endpoint inference.</p>
+      <p><strong>GenAI and knowledge systems:</strong> LangChain, LangGraph, Qdrant, Chroma, FAISS, Neo4j, GraphRAG, hybrid retrieval, reranking, citations, guardrails, local inference, and agent evaluation.</p>
+      <p><strong>Control and intelligent systems:</strong> MATLAB/Simulink, reinforcement learning, motion planning, robot kinematics and dynamics, state-space modeling, system identification, observers, fault detection, cyber-physical systems, and robust control.</p>
     </section>
 
     <section class="resume-section">
       <h2>Selected engineering projects</h2>
       <div class="resume-items">
         <article class="resume-item">
-          <h3>MetricTrace</h3>
-          <p class="resume-meta">Reliable AI · Python · Pydantic · LangChain · Streamlit</p>
-          <p>Designed one deterministic computation layer for CLI and Streamlit through a validated JSON contract, eliminating duplicated metric logic and keeping results consistent across interfaces.</p>
+          <h3>End-to-End Fraud Detection MLOps Platform</h3>
+          <p class="resume-meta">LightGBM · XGBoost · Airflow · MLflow · FastAPI · Docker · AWS SageMaker AI</p>
+          <p>Built a reproducible fraud-detection platform using leakage-safe temporal splitting, train-fitted feature engineering, calibrated thresholding, drift and monitoring reports, experiment tracking, workflow orchestration, containerized API serving, and managed AWS processing, training, evaluation, and endpoint inference.</p>
         </article>
+
         <article class="resume-item">
-          <h3>Fraud ML Platform</h3>
-          <p class="resume-meta">MLOps · LightGBM · XGBoost · Airflow · MLflow · FastAPI</p>
-          <p>Connected data orchestration, temporal modeling and uncertainty evaluation, and API/deployment concerns in a reproducible fraud-detection platform.</p>
+          <h3>Chest X-Ray Diagnosis</h3>
+          <p class="resume-meta">PyTorch · DenseNet121 · MLflow · Grad-CAM</p>
+          <p>Developed a multi-label medical-image classification workflow with patient-disjoint validation, AUROC-based evaluation, experiment tracking, and Grad-CAM visual explanations to support transparent model analysis.</p>
         </article>
+
         <article class="resume-item">
           <h3>Advanced Agentic RAG</h3>
           <p class="resume-meta">LangChain · Qdrant · BM25 · Reranking · Phoenix</p>
-          <p>Implemented and compared six retrieval strategies with reranking, evidence sufficiency checks, corrective routing, citations, guardrails, and tracing.</p>
+          <p>Implemented and compared multiple retrieval strategies with hybrid search, reranking, evidence-sufficiency checks, corrective routing, citation validation, guardrails, and tracing for reliable document intelligence.</p>
+        </article>
+
+        <article class="resume-item">
+          <h3>DeskPilot Local IT Help-Desk Assistant</h3>
+          <p class="resume-meta">Ollama · Chroma · LangChain · Streamlit</p>
+          <p>Built a privacy-aware local RAG assistant that retrieves operational knowledge from CSV, SQLite, and PDF sources while keeping inference and data processing on local infrastructure.</p>
+        </article>
+
+        <article class="resume-item">
+          <h3>NASA APOD ETL Pipeline</h3>
+          <p class="resume-meta">Airflow · Astro · PostgreSQL · Docker · GitHub Actions</p>
+          <p>Designed a tested and repeatable ETL pipeline that ingests NASA APOD records, validates incoming data, performs idempotent PostgreSQL upserts, and runs through containerized orchestration and continuous integration.</p>
+        </article>
+
+        <article class="resume-item">
+          <h3>MetricTrace</h3>
+          <p class="resume-meta">Python · Pydantic · LangChain · Streamlit · pytest</p>
+          <p>Created an auditable metric-computation system that separates deterministic calculations from optional LLM-generated explanations, ensuring consistent results across command-line and web interfaces.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="resume-section">
+      <h2>Research and intelligent systems</h2>
+      <div class="resume-items">
+        <article class="resume-item">
+          <h3>Distributed Edge AI and ML Security</h3>
+          <p class="resume-meta">Adversarial ML · Distributed Inference · Uncertainty · Feature Recovery</p>
+          <p>Developed ML-security methods for distributed edge inference, including feature-space attack generation, cascade anomaly detection, adaptive feature repair, and uncertainty-aware hardware-Trojan detection. Evaluated robustness under quantization, communication noise, feature dropout, and adversarial perturbations.</p>
+        </article>
+
+        <article class="resume-item">
+          <h3>RL-Based Desalination Control</h3>
+          <p class="resume-meta">Deep Reinforcement Learning · Process Control · Energy Optimization</p>
+          <p>Designed deep-reinforcement-learning methods for energy-aware operation of reverse-osmosis desalination under changing demand, renewable-energy availability, and operating constraints.</p>
+        </article>
+
+        <article class="resume-item">
+          <h3>Robotics and Motion Planning</h3>
+          <p class="resume-meta">MATLAB/Simulink · PRM · Robot Dynamics · Control</p>
+          <p>Implemented a reusable probabilistic-roadmap planner and a two-link robotic-manipulator control model covering path planning, graph search, collision checking, inverse kinematics, nonlinear dynamics, motor models, simulation, and visualization.</p>
         </article>
       </div>
     </section>
@@ -65,9 +110,18 @@
     <section class="resume-section">
       <h2>Selected publications</h2>
       <div class="resume-items">
-        <article class="resume-item"><h3>A dual-stage deep learning approach for robust detection and identification of hardware trojans using Monte-Carlo dropout</h3><p class="resume-meta">International Journal of Information Security, 2025</p></article>
-        <article class="resume-item"><h3>Optimal operation of reverse osmosis desalination process with deep reinforcement learning methods</h3><p class="resume-meta">Applied Intelligence, 2024</p></article>
-        <article class="resume-item"><h3>A Bayesian Approach for LPV Model Identification and Its Application to Complex Processes</h3><p class="resume-meta">IEEE Transactions on Control Systems Technology, 2017</p></article>
+        <article class="resume-item">
+          <h3>A dual-stage deep learning approach for robust detection and identification of hardware trojans using Monte-Carlo dropout</h3>
+          <p class="resume-meta">International Journal of Information Security, 2025</p>
+        </article>
+        <article class="resume-item">
+          <h3>Optimal operation of reverse osmosis desalination process with deep reinforcement learning methods</h3>
+          <p class="resume-meta">Applied Intelligence, 2024</p>
+        </article>
+        <article class="resume-item">
+          <h3>A Bayesian Approach for LPV Model Identification and Its Application to Complex Processes</h3>
+          <p class="resume-meta">IEEE Transactions on Control Systems Technology, 2017</p>
+        </article>
       </div>
     </section>
   </main>
