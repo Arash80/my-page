@@ -233,17 +233,19 @@
         <div class="research-actions"><a class="button secondary" href="https://doi.org/10.1109/TCST.2016.2642159" target="_blank" rel="noreferrer">View publication</a></div>
       </article>
 
-      <article class="case-study" id="cps-security">
-        <span class="tag">Cyber-Physical Systems</span>
-        <h2>Attack and Fault Detection</h2>
-        <p class="case-note">Observer- and residual-based methods for detecting and isolating abnormal behavior in nonlinear cyber-physical systems.</p>
-        <div class="case-grid">
-          <div><h3>System problem</h3><p>Attacks, faults, disturbances, and measurement noise can produce similar symptoms, making reliable detection and isolation difficult.</p></div>
-          <div><h3>Research contribution</h3><p>Designed nonlinear observers, residual generators, thresholds, and evaluation scenarios for fault detection, attack detection, and isolation under uncertainty.</p></div>
-          <div><h3>Engineering relevance</h3><p>The work combines state estimation, robust control concepts, security modeling, and quantitative detection metrics for safety-critical dynamic systems.</p></div>
+      <article class="case-study" id="distributed-edge-ai">
+        <span class="tag">Distributed Edge AI</span>
+        <h2>Distributed Edge AI &amp; Adversarial Detection</h2>
+        <p class="case-note">A real-device evaluation of adversarial feature detection in a three-node distributed deep-learning pipeline running across Raspberry Pi devices.</p>
+        <div class="case-architecture" aria-label="Distributed edge AI architecture diagram">
+          <span>Pi 1 · Feature extraction</span><i>→</i><span>Feature-space perturbation</span><i>→</i><span>Pi 2 · MD detector</span><i>→</i><span>Pi 3 · Classification</span>
         </div>
-        <div class="stack">Nonlinear Observers · Residual Analysis · Fault Isolation · Robust Control · CPS Security</div>
-        <div class="research-actions"><a class="button secondary" href="https://scholar.google.com/citations?hl=en&amp;user=JTtQ114AAAAJ" target="_blank" rel="noreferrer">View related publications</a></div>
+        <div class="case-grid">
+          <div><h3>Security problem</h3><p>Partitioned edge inference exposes intermediate feature maps to communication noise and adversarial manipulation, while detection must remain lightweight enough for resource-constrained devices.</p></div>
+          <div><h3>My contribution</h3><p>Partitioned a VGG11 model across three Raspberry Pi nodes, implemented channel-sparse feature perturbations and Mahalanobis-distance detection, calibrated clean-feature statistics, automated experiment grids, and measured detector and classification behavior.</p></div>
+          <div><h3>Engineering result</h3><p>The project connects adversarial ML with deployable edge systems by reporting real-device detection outcomes and computational overhead rather than relying only on desktop simulation.</p></div>
+        </div>
+        <div class="stack">PyTorch · Raspberry Pi · Distributed Inference · Mahalanobis Detection · Adversarial ML · CIFAR-10</div>
       </article>
 
       <div class="actions">
