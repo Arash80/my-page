@@ -1,4 +1,4 @@
-# Arash Golabi — Portfolio
+# Arash — Portfolio
 
 A responsive static portfolio for applied AI, machine learning, research, robotics, and control-engineering work.
 
