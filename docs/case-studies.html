@@ -40,6 +40,25 @@
         <h2>Engineering projects</h2>
       </div>
 
+      <article class="case-study" id="aegisops">
+        <span class="tag">MLOps · GCP · Agentic AI</span>
+        <h2>AegisOps Loan Risk</h2>
+        <p class="case-note">An end-to-end credit-risk ML platform that connects governed model development, cloud deployment, monitoring, reproducible incidents, and evidence-grounded investigation.</p>
+        <div class="case-architecture" aria-label="AegisOps platform architecture summary">
+          <span>Data · Training · Threshold</span><i>→</i><span>Promotion · Cloud Run API</span><i>→</i><span>Monitoring · Incidents</span><i>→</i><span>LangGraph · Gemini diagnosis</span>
+        </div>
+        <figure style="margin: 28px 0; padding: 20px; border: 1px solid rgba(255,255,255,.1); border-radius: 16px; background: #ffffff;">
+          <img src="assets/aegisops-langgraph-workflow.svg" alt="AegisOps LangGraph workflow showing deterministic triage, four specialist investigation routes, model metadata loading, and structured diagnosis generation" style="display: block; width: 100%; height: auto; border-radius: 10px;">
+          <figcaption style="margin-top: 14px; color: #536078; font-size: .92rem; text-align: center;">Deterministic triage routes each monitoring incident to a focused investigation node before the LLM generates a structured diagnosis.</figcaption>
+        </figure>
+        <div class="case-grid">
+          <div><h3>Problem</h3><p>A deployed model needs more than training accuracy: reproducible preprocessing, threshold governance, immutable promotion, safe serving, drift detection, and disciplined incident investigation must work together.</p></div>
+          <div><h3>My contribution</h3><p>Built deterministic data preparation, Logistic Regression and XGBoost training, validation-only cost-aware threshold selection, test gates, versioned promotion, FastAPI serving on Cloud Run, monitoring reports, synthetic incidents, LangChain tools, and a routed LangGraph workflow.</p></div>
+          <div><h3>Engineering result</h3><p>The system separates deterministic loading, validation, triage, routing, and evidence collection from Gemini-based interpretation. The agent recommends actions but cannot retrain, roll back, redeploy, or modify production.</p></div>
+        </div>
+        <div class="stack">Python · XGBoost · FastAPI · Vertex AI · Cloud Run · Cloud Build · Cloud Storage · LangChain · LangGraph · Gemini · pytest</div>
+      </article>
+
       <article class="case-study" id="metrictrace">
         <span class="tag">Reliable AI</span>
         <h2>MetricTrace</h2>
