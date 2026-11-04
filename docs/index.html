@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark light">
-  <meta name="description" content="Arash builds applied AI systems, ML platforms, Python services, and learning-based control solutions. Full interactive portfolio preview.">
+  <meta name="description" content="Arash builds applied AI systems, ML platforms, Python services, and learning-based control solutions. Browse engineering projects and research.">
   <title>Arash — Applied AI, MLOps & Research</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -342,10 +342,79 @@
 @media(max-width:770px) { .more-work-section {padding-top:70px;} .more-work-grid, .catalog-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .catalog-card {padding:18px;} .catalog-tools {align-items:stretch;} .catalog-search {width:100%;max-width:none;} .full-directory-items {grid-template-columns:1fr;} .directory-intro {padding-top:44px;} }
 @media(max-width:540px) { .more-work-grid, .catalog-grid {grid-template-columns:1fr;} .catalog-card {min-height:193px;} .directory-counts {gap:18px;} .catalog-filters button {font-size:10px;padding:8px 10px;} .full-directory > summary {padding:18px;} .full-directory-inner {padding-inline:18px;} }
 
+
+/* Portfolio refinement: stronger navy-and-blue hierarchy, without photos. */
+html[data-theme="dark"] {
+  --page: #091426;
+  --page-2: #0e1d32;
+  --panel: #14253e;
+  --panel-2: #1b3352;
+  --panel-3: #234063;
+  --ink: #f3f7ff;
+  --muted: #b6c7df;
+  --soft: #93a8c5;
+  --stroke: #39516f;
+  --stroke-soft: #2b405b;
+  --blue: #8bbcff;
+  --blue-strong: #5d9cff;
+  --nav: #0b192be9;
+  --glow: #3876ca75;
+}
+html[data-theme="dark"] body {
+  background:
+    radial-gradient(ellipse 88% 18% at 77% 4%, rgba(44, 105, 197, .27), transparent 72%),
+    radial-gradient(ellipse 72% 21% at 4% 41%, rgba(21, 114, 148, .13), transparent 77%),
+    linear-gradient(180deg, #091426 0%, #0c1a2e 46%, #081323 100%);
+}
+html[data-theme="dark"] body::before { display: none; }
+html[data-theme="dark"] .system-panel {
+  background: linear-gradient(147deg, #1b3659 0%, #142b47 45%, #0e1d34 100%);
+  border-color: #45658c;
+  box-shadow: 0 26px 62px rgba(2, 10, 23, .38);
+}
+html[data-theme="dark"] .project-card,
+html[data-theme="dark"] .catalog-card,
+html[data-theme="dark"] .research-card,
+html[data-theme="dark"] .approach,
+html[data-theme="dark"] .full-directory {
+  background: linear-gradient(155deg, #192f4e 0%, #142741 55%, #111f35 100%);
+  border-color: #365473;
+  box-shadow: 0 8px 30px rgba(2, 12, 26, .15);
+}
+html[data-theme="dark"] .project-card:hover,
+html[data-theme="dark"] .catalog-card:hover,
+html[data-theme="dark"] .research-card:hover {
+  border-color: #6c9bcf;
+  box-shadow: 0 18px 40px rgba(4, 15, 38, .3);
+}
+html[data-theme="dark"] .skills-strip {
+  background: linear-gradient(105deg, #152e4e 0%, #142640 58%, #1a3554 100%);
+  border-color: #3c5779;
+}
+html[data-theme="dark"] .contact-box {
+  background: linear-gradient(120deg, #246ab9 0%, #1d4b91 50%, #152f5f 100%);
+  border-color: #5c90cc;
+}
+html[data-theme="dark"] .hero-blue { color: #91bcff; }
+html[data-theme="dark"] .small-cta,
+html[data-theme="dark"] .filter-row button[aria-pressed="true"],
+html[data-theme="dark"] .catalog-filters button[aria-pressed="true"] {
+  background: #3574df;
+  border-color: #5b91fa;
+}
+html[data-theme="dark"] .btn-primary {
+  background: linear-gradient(130deg, #347af4, #528ff4);
+  border-color: #689df9;
+}
+@media (prefers-reduced-motion: reduce) {
+  html[data-theme="dark"] .project-card,
+  html[data-theme="dark"] .catalog-card { transition: none; }
+}
+
 </style>
 </head>
 <body>
-  <!-- Inline SVG symbols are interface icons; this mockup uses no profile/stock photos. -->
+  <!-- Inline SVG symbols are interface icons. -->
   <svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
     <symbol id="i-up" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
@@ -445,7 +514,7 @@
     </section>
 
     <section class="wrap section more-work-section" id="more-work" aria-labelledby="more-work-title">
-      <div class="section-heading"><div class="more-work-header"><p class="overline">02 / More selected work</p><h2 id="more-work-title">More than four projects.</h2><p class="more-intro">A broader view of the systems I build—from agent workflows and model evaluation to data engineering and research tooling.</p></div><a class="small-link" href="projects.html">Browse complete directory <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></a></div>
+      <div class="section-heading"><div class="more-work-header"><p class="overline">02 / Beyond the highlights</p><h2 id="more-work-title">More of what I’ve built.</h2><p class="more-intro">A broader view of the systems I build—from agent workflows and model evaluation to data engineering and research tooling.</p></div><a class="small-link" href="projects.html">Browse complete directory <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></a></div>
       <div class="filter-row" role="group" aria-label="Filter additional projects"><button data-work-filter="all" aria-pressed="true">All work</button><button data-work-filter="genai" aria-pressed="false">GenAI & agents</button><button data-work-filter="mlops" aria-pressed="false">ML & MLOps</button><button data-work-filter="trustworthy" aria-pressed="false">Trustworthy AI</button><button data-work-filter="data" aria-pressed="false">Data engineering</button><span class="filter-note" id="more-work-status" role="status" aria-live="polite">Showing 8 projects</span></div>
       <div class="more-work-grid" id="more-work-grid"><article class="catalog-card" data-category="genai" data-search="alignmentops lora supervised fine-tuning and controlled base-versus-adapter llm evaluation. pytorch lora trl genai &amp; rag"><div class="catalog-card-top"><div class="catalog-icon"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg></div><span class="catalog-cat">GenAI &amp; RAG</span></div><h3>AlignmentOps</h3><p>LoRA supervised fine-tuning and controlled base-versus-adapter LLM evaluation.</p><div class="catalog-bottom"><div class="catalog-tags"><span>PyTorch</span><span>LoRA</span><span>TRL</span></div><button type="button" data-open="alignmentops" class="catalog-open" aria-label="Details for AlignmentOps">Quick view <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></button></div></article><article class="catalog-card" data-category="trustworthy" data-search="metrictrace auditable calculation engine that keeps metrics separate from ai explanations. pydantic python testing trustworthy ai"><div class="catalog-card-top"><div class="catalog-icon"><svg class="icon" aria-hidden="true"><use href="#i-pulse"/></svg></div><span class="catalog-cat">Trustworthy AI</span></div><h3>MetricTrace</h3><p>Auditable calculation engine that keeps metrics separate from AI explanations.</p><div class="catalog-bottom"><div class="catalog-tags"><span>Pydantic</span><span>Python</span><span>Testing</span></div><button type="button" data-open="metrictrace" class="catalog-open" aria-label="Details for MetricTrace">Quick view <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></button></div></article><article class="catalog-card" data-category="genai" data-search="advanced agentic rag hybrid retrieval, reranking, evidence sufficiency, and corrective answer routing. langchain bm25 reranking genai &amp; rag"><div class="catalog-card-top"><div class="catalog-icon"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></div><span class="catalog-cat">GenAI &amp; RAG</span></div><h3>Advanced Agentic RAG</h3><p>Hybrid retrieval, reranking, evidence sufficiency, and corrective answer routing.</p><div class="catalog-bottom"><div class="catalog-tags"><span>LangChain</span><span>BM25</span><span>Reranking</span></div><button type="button" data-open="agenticrag" class="catalog-open" aria-label="Details for Advanced Agentic RAG">Quick view <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></button></div></article><article class="catalog-card" data-category="genai" data-search="deskpilot private, local help-desk assistant across csv, sqlite, and pdf data. ollama chroma streamlit genai &amp; rag"><div class="catalog-card-top"><div class="catalog-icon"><svg class="icon" aria-hidden="true"><use href="#i-terminal"/></svg></div><span class="catalog-cat">GenAI &amp; RAG</span></div><h3>DeskPilot</h3><p>Private, local help-desk assistant across CSV, SQLite, and PDF data.</p><div class="catalog-bottom"><div class="catalog-tags"><span>Ollama</span><span>Chroma</span><span>Streamlit</span></div><button type="button" data-open="deskpilot" class="catalog-open" aria-label="Details for DeskPilot">Quick view <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></button></div></article><article class="catalog-card" data-category="data" data-search="nasa apod pipeline repeatable airflow ingestion of nasa apod records into postgresql. airflow postgresql docker data engineering"><div class="catalog-card-top"><div class="catalog-icon"><svg class="icon" aria-hidden="true"><use href="#i-database"/></svg></div><span class="catalog-cat">Data Engineering</span></div><h3>NASA APOD Pipeline</h3><p>Repeatable Airflow ingestion of NASA APOD records into PostgreSQL.</p><div class="catalog-bottom"><div class="catalog-tags"><span>Airflow</span><span>PostgreSQL</span><span>Docker</span></div><button type="button" data-open="nasa" class="catalog-open" aria-label="Details for NASA APOD Pipeline">Quick view <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></button></div></article><article class="catalog-card" data-category="mlops" data-search="chest x-ray diagnosis patient-disjoint deep-learning evaluation and gradcam visual explanations. pytorch densenet121 gradcam ml &amp; mlops"><div class="catalog-card-top"><div class="catalog-icon"><svg class="icon" aria-hidden="true"><use href="#i-chip"/></svg></div><span class="catalog-cat">ML &amp; MLOps</span></div><h3>Chest X-Ray Diagnosis</h3><p>Patient-disjoint deep-learning evaluation and GradCAM visual explanations.</p><div class="catalog-bottom"><div class="catalog-tags"><span>PyTorch</span><span>DenseNet121</span><span>GradCAM</span></div><button type="button" data-open="chestxray" class="catalog-open" aria-label="Details for Chest X-Ray Diagnosis">Quick view <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></button></div></article><article class="catalog-card" data-category="genai" data-search="fraudscope agents local multi-agent data analysis with guarded execution and deterministic reports. autogen ollama pandas genai &amp; rag"><div class="catalog-card-top"><div class="catalog-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></div><span class="catalog-cat">GenAI &amp; RAG</span></div><h3>FraudScope Agents</h3><p>Local multi-agent data analysis with guarded execution and deterministic reports.</p><div class="catalog-bottom"><div class="catalog-tags"><span>AutoGen</span><span>Ollama</span><span>pandas</span></div><button type="button" data-open="fraudscope" class="catalog-open" aria-label="Details for FraudScope Agents">Quick view <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></button></div></article><article class="catalog-card" data-category="genai" data-search="cybergraphrag graph-enhanced cybersecurity research retrieval with page-level citations. neo4j graphrag ollama genai &amp; rag"><div class="catalog-card-top"><div class="catalog-icon"><svg class="icon" aria-hidden="true"><use href="#i-git"/></svg></div><span class="catalog-cat">GenAI &amp; RAG</span></div><h3>CyberGraphRAG</h3><p>Graph-enhanced cybersecurity research retrieval with page-level citations.</p><div class="catalog-bottom"><div class="catalog-tags"><span>Neo4j</span><span>GraphRAG</span><span>Ollama</span></div><button type="button" data-open="cybergraph" class="catalog-open" aria-label="Details for CyberGraphRAG">Quick view <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></button></div></article></div>
       <div class="more-actions"><a class="btn btn-secondary" href="projects.html">Explore all 19 projects <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></a></div>
