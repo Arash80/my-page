@@ -4,26 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="FraudScope Agents: a local multi-agent data-analysis system with guarded code execution and deterministic reporting">
-  <title>FraudScope Agents | Arash</title>
+  <title>FraudScope Agents — Arash Golabi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="portfolio-filters.css">
+  <script src="site.js" defer></script>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 </head>
 <body>
-  <nav class="nav" aria-label="Primary navigation">
-    <div class="wrap nav-inner">
-      <a class="brand" href="index.html">Arash</a>
-      <div class="nav-links">
-        <a href="index.html#projects">Projects</a>
-        <a href="case-studies.html">Case Studies</a>
-        <a href="index.html#skills">Skills</a>
-        <a href="resume.html">Résumé</a>
-        <a href="index.html#contact">Contact</a>
-      </div>
-    </div>
-  </nav>
+<a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+  <a class="brand" href="index.html" aria-label="Arash Golabi home"><span class="brand-mark">ag<span>.</span></span><span class="brand-name">Arash Golabi</span></a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu <span aria-hidden="true">+</span></button>
+  <nav id="primary-nav" aria-label="Main navigation"><a href="index.html#projects">Work</a><a href="index.html#research-control">Research</a><a href="index.html#about">About</a><a href="resume.html">Résumé <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a><a class="nav-contact" href="index.html#contact">Get in touch <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></nav>
+</header>
 
   <header class="page-header">
     <div class="wrap">
@@ -33,7 +28,7 @@
     </div>
   </header>
 
-  <main class="section">
+  <main class="section" id="main">
     <div class="wrap case-list">
       <article class="case-study" id="fraudscope-agents">
         <span class="tag">Microsoft AutoGen · Local AI</span>
@@ -41,7 +36,7 @@
         <p class="case-note">The system uses local Qwen models through Ollama for orchestration and review, while a tested Python profiler performs the actual dataset calculations.</p>
 
         <div class="case-architecture" aria-label="FraudScope Agents architecture summary">
-          <span>Analysis request</span><i>→</i><span>Code writer</span><i>→</i><span>Guarded Jupyter execution</span><i>→</i><span>Dataset analyst · Repair loop</span>
+          <span>Analysis request</span><i><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></i><span>Code writer</span><i><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></i><span>Guarded Jupyter execution</span><i><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></i><span>Dataset analyst · Repair loop</span>
         </div>
 
         <div class="case-grid">
@@ -84,11 +79,6 @@
     </div>
   </main>
 
-  <footer>
-    <div class="wrap footer-inner">
-      <div><strong>Arash</strong><span>Applied AI &amp; Machine Learning Engineer</span></div>
-      <a href="mailto:arash.shm62@gmail.com">arash.shm62@gmail.com</a>
-    </div>
-  </footer>
+  <footer class="site-footer shell"><a class="brand" href="index.html"><span class="brand-mark">ag<span>.</span></span><span>Arash Golabi</span></a><p>Applied AI. Thoughtful engineering.</p><a href="#main">Back to top <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20V4m-6 6 6-6 6 6"/></svg></a></footer>
 </body>
 </html>
