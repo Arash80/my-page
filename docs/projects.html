@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <meta name="description" content="Complete projects and research directory for Arash: ML and MLOps, agentic AI, backend engineering, data pipelines, robotics and control.">
+  <title>All Projects — Arash</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;550;600;650;700;750;800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --page: #080e1b;
+      --page-2: #0b1322;
+      --panel: #101b2d;
+      --panel-2: #142138;
+      --panel-3: #192740;
+      --ink: #f1f5ff;
+      --muted: #abb8cd;
+      --soft: #8090ab;
+      --stroke: #26364f;
+      --stroke-soft: #1e2d43;
+      --blue: #76a7ff;
+      --blue-strong: #4d87ff;
+      --mint: #80d7c3;
+      --violet: #b8a2fb;
+      --amber: #ebc38b;
+      --shadow: 0 18px 42px #02081455;
+      --nav: #0a1220ec;
+      --glow: #244a8a46;
+    }
+    [data-theme="light"] {
+      --page: #f4f7fc;
+      --page-2: #eaf0f8;
+      --panel: #ffffff;
+      --panel-2: #eef3fc;
+      --panel-3: #e6edf9;
+      --ink: #14223a;
+      --muted: #50617a;
+      --soft: #6a7a91;
+      --stroke: #d4deed;
+      --stroke-soft: #e1e7f1;
+      --blue: #235cca;
+      --blue-strong: #2867df;
+      --mint: #10735f;
+      --violet: #6542b5;
+      --amber: #875510;
+      --shadow: 0 16px 42px #18345a12;
+      --nav: #f7f9fbee;
+      --glow: #ccdcfa;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 102px; }
+    body { margin: 0; background: var(--page); color: var(--ink); font-size: 15px; line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    body::before { content: ""; z-index: -1; position: absolute; top: 20px; left: 50%; transform: translateX(-50%); width: min(1100px, 100%); height: 780px; background: radial-gradient(ellipse at 71% 25%, var(--glow), transparent 64%); pointer-events: none; }
+    h1,h2,h3,p { margin-top: 0; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; }
+    button:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+    ::selection { background: #548ff9; color: #fff; }
+    .wrap { width: min(1150px, calc(100% - 56px)); margin-inline: auto; }
+    .icon { display: inline-block; width: 18px; height: 18px; vertical-align: middle; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+    .skip-link { position: absolute; z-index: 999; top: -99px; left: 12px; padding: 10px 16px; background: #fff; color: #111; border-radius: 8px; }
+    .skip-link:focus { top: 12px; }
+    .concept-ribbon { border-bottom: 1px solid var(--stroke-soft); background: var(--page-2); font-size: 11px; font-weight: 650; letter-spacing: .055em; text-transform: uppercase; color: var(--soft); }
+    .concept-ribbon .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px 22px; padding-block: 9px; }
+    .concept-ribbon span:first-child { color: var(--blue); }
+    .site-header { position: sticky; z-index: 100; top: 0; background: var(--nav); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--stroke-soft); }
+    .head-inner { display: flex; align-items: center; gap: 23px; min-height: 76px; }
+    .brand { display: flex; align-items: center; gap: 12px; white-space: nowrap; }
+    .brand-symbol { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; color: #fff; background: linear-gradient(135deg, #3974ea, #77b1fa); font-size: 15px; font-weight: 800; letter-spacing: -.055em; box-shadow: 0 7px 20px #3974ea3c; }
+    .brand-copy { display: grid; line-height: 1.3; }
+    .brand-name { font-size: 14px; font-weight: 750; letter-spacing: -.035em; }
+    .brand-sub { font-size: 10px; font-weight: 600; color: var(--soft); margin-top: 3px; letter-spacing: .04em; }
+    .nav { display: flex; align-items: center; gap: 25px; margin-inline: auto; }
+    .nav a { font-size: 12px; font-weight: 650; color: var(--muted); transition: color .2s; }
+    .nav a:hover, .nav a.active { color: var(--ink); }
+    .nav a.active { box-shadow: 0 13px 0 -11px var(--blue); }
+    .head-actions { display: flex; align-items: center; gap: 9px; }
+    .icon-button { display: grid; place-items: center; border: 1px solid var(--stroke); background: transparent; color: var(--muted); width: 37px; height: 37px; border-radius: 10px; }
+    .icon-button:hover { color: var(--ink); background: var(--panel-2); }
+    .small-cta { display: inline-flex; gap: 9px; align-items: center; border: 1px solid #487be7; background: #2c63d2; color: #fff; font-size: 12px; font-weight: 700; border-radius: 10px; padding: 9px 14px; white-space: nowrap; }
+    .small-cta:hover { background: #3b74ed; }
+    .menu-toggle { display: none; }
+    .hero { padding-top: 100px; padding-bottom: 74px; display: grid; grid-template-columns: 1.06fr .94fr; gap: clamp(45px, 6vw, 98px); align-items: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--blue); font-size: 11px; font-weight: 750; letter-spacing: .115em; text-transform: uppercase; margin: 0 0 25px; }
+    .pulse { width: 7px; height: 7px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 0 4px #4fb69d1d; }
+    .hero h1 { font-size: clamp(42px, 4vw, 56px); letter-spacing: -.067em; font-weight: 800; line-height: 1.09; margin: 0 0 25px; }
+    .hero h1 .hero-blue { color: var(--blue); }
+    .hero-lead { color: var(--muted); font-size: 17px; max-width: 580px; line-height: 1.85; margin-bottom: 30px; }
+    .hero-links { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    .btn { display: inline-flex; justify-content: center; align-items: center; gap: 11px; min-height: 47px; border-radius: 10px; padding: 11px 18px; font-weight: 700; font-size: 13px; transition: transform .15s ease, background .15s ease; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { color: white; border: 1px solid #4a83ed; background: linear-gradient(135deg, #2e70ef, #437fe9); box-shadow: 0 8px 24px #2368ec2b; }
+    .btn-secondary { background: var(--panel); border: 1px solid var(--stroke); color: var(--ink); }
+    .btn-secondary:hover { background: var(--panel-2); }
+    .hero-minilinks { margin-top: 29px; display: flex; gap: 23px; flex-wrap: wrap; color: var(--soft); font-size: 12px; font-weight: 600; }
+    .hero-minilinks a { display: inline-flex; align-items: center; gap: 8px; }
+    .hero-minilinks a:hover { color: var(--blue); }
+    .system-panel { position: relative; border: 1px solid #334565; background: linear-gradient(160deg, #162743, #0d192b 65%); box-shadow: var(--shadow); border-radius: 22px; padding: 25px; overflow: hidden; }
+    .system-panel::before { content: ""; position: absolute; width: 300px; height: 300px; border: 1px solid #91b4ec16; border-radius: 50%; right: -125px; top: -165px; box-shadow: 0 0 0 55px #91b4ec08, 0 0 0 115px #91b4ec05; }
+    .system-top { display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 2; }
+    .system-kicker { color: #8da8cf; text-transform: uppercase; font-size: 10px; letter-spacing: .14em; font-weight: 750; }
+    .system-state { display: flex; gap: 7px; align-items: center; font-size: 10px; font-weight: 750; color: #8de0ce; background: #235b5538; border: 1px solid #4c968a57; padding: 6px 9px; border-radius: 30px; }
+    .system-panel h2 { position: relative; color: #f4f7ff; font-size: 25px; line-height: 1.35; font-weight: 750; letter-spacing: -.045em; margin: 22px 0 6px; }
+    .system-intro { position: relative; z-index: 2; color: #abbad0; margin-bottom: 25px; font-size: 12px; }
+    .flow-diagram { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 10px; align-items: start; position: relative; padding: 4px 0 0; }
+    .flow-step { position: relative; background: #1c2d49; border: 1px solid #365378; border-radius: 12px; min-height: 106px; display: flex; align-items: center; flex-direction: column; justify-content: center; gap: 10px; }
+    .flow-step:not(:last-child)::after { content: "→"; position: absolute; color: #adc5f6; right: -13px; font-size: 17px; top: 40%; z-index: 3; }
+    .flow-step .icon { color: #86b4ff; width: 24px; height: 24px; }
+    .flow-step strong { font-size: 11px; color: #e7eefc; text-align: center; line-height: 1.35; }
+    .flow-step small { display: none; }
+    .system-bottom { margin-top: 24px; border-top: 1px solid #354866; padding-top: 19px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; }
+    .system-bottom p { margin: 0; max-width: 220px; font-size: 12px; font-weight: 650; color: #d0dff5; line-height: 1.6; }
+    .signal-pill { border: 1px solid #406d6d; border-radius: 8px; color: #93daca; background: #214c4d52; font-weight: 700; font-size: 10px; padding: 8px 10px; }
+    .system-footer { text-align: right; padding-top: 13px; color: #7a92b2; font-size: 10px; }
+    .skills-strip { border: 1px solid var(--stroke); background: var(--panel); border-radius: 14px; padding: 15px 21px; display: flex; gap: 15px; flex-wrap: wrap; justify-content: space-between; align-items: center; box-shadow: var(--shadow); }
+    .skills-strip strong { font-size: 10px; color: var(--soft); letter-spacing: .08em; text-transform: uppercase; }
+    .skills-strip span { display: flex; gap: 9px; align-items: center; color: var(--muted); font-size: 12px; font-weight: 650; }
+    .skills-strip span:not(:last-child)::before { content: ""; width: 6px; height: 6px; border: 1px solid var(--blue); border-radius: 50%; }
+    .section { padding-top: 110px; }
+    .section-heading { display: flex; justify-content: space-between; gap: 30px; align-items: end; margin-bottom: 28px; }
+    .overline { margin-bottom: 8px; color: var(--blue); font-size: 11px; font-weight: 750; text-transform: uppercase; letter-spacing: .105em; }
+    .section-heading h2 { font-size: clamp(29px, 3vw, 37px); line-height: 1.25; font-weight: 800; letter-spacing: -.05em; margin: 0 0 9px; }
+    .section-heading p:last-child { color: var(--muted); font-size: 13px; margin: 0; }
+    .small-link { font-size: 12px; font-weight: 700; color: var(--blue); display: inline-flex; gap: 7px; align-items: center; white-space: nowrap; }
+    .small-link:hover { text-decoration: underline; }
+    .filter-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 23px 0 22px; }
+    .filter-row button { border: 1px solid var(--stroke); border-radius: 40px; padding: 8px 15px; color: var(--muted); background: var(--panel); font-size: 11px; font-weight: 700; }
+    .filter-row button:hover { border-color: var(--blue); }
+    .filter-row button[aria-pressed="true"] { background: #2c63d2; border-color: #2c63d2; color: #fff; }
+    .filter-note { margin-left: auto; color: var(--soft); font-size: 11px; font-weight: 600; }
+    .project-grid { display: grid; grid-template-columns: repeat(12,minmax(0,1fr)); gap: 17px; }
+    .project-card { grid-column: span 6; display: flex; flex-direction: column; min-width: 0; border: 1px solid var(--stroke); border-radius: 17px; background: var(--panel); overflow: hidden; transition: transform .18s, border-color .18s, box-shadow .18s; }
+    .project-card:hover { transform: translateY(-4px); border-color: #4c6d9d; box-shadow: var(--shadow); }
+    .project-card[hidden] { display: none; }
+    .project-art { min-height: 180px; height: 180px; padding: 20px 23px; position: relative; overflow: hidden; border-bottom: 1px solid #243856; }
+    .project-art .mock-label { font-size: 10px; letter-spacing: .09em; text-transform: uppercase; font-weight: 750; color: #abbddd; }
+    .aegis-art { background: radial-gradient(circle at 75% 70%, #254a7a70, transparent 60%), #101d34; }
+    .rag-art { background: radial-gradient(circle at 65% 90%, #50448657, transparent 62%), #151b37; }
+    .backend-art { background: radial-gradient(circle at 75% 80%, #6c584357, transparent 65%), #1b2030; }
+    .fraud-art { background: radial-gradient(circle at 67% 85%, #1c716558, transparent 65%), #0f292e; }
+    .art-table { position: absolute; inset: 53px 23px 16px; display: grid; grid-template-columns: 1.3fr .7fr; gap: 11px; }
+    .mini-chart { position: relative; border: 1px solid #2d4a76; background: #0b1a32; border-radius: 8px; overflow: hidden; padding: 10px 11px; }
+    .mini-chart-head { display: flex; justify-content: space-between; gap: 4px; color: #a7bee3; font-size: 9px; }
+    .mini-chart-head b { font-size: 9px; color: #87ddcb; }
+    .mini-chart svg { width: 100%; height: 67px; margin-top: 7px; overflow: visible; }
+    .mini-chart .chart-grid { stroke: #304769; stroke-width: 1; opacity: .55; }
+    .mini-chart .chart-line { stroke: #69a7ff; fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .mini-report { border: 1px solid #305078; background: #152740; border-radius: 8px; padding: 12px; display: flex; flex-direction: column; gap: 9px; }
+    .report-badge { width: max-content; font-size: 8px; font-weight: 750; color: #ffbcb6; background: #a3484e48; padding: 4px 7px; border-radius: 5px; }
+    .report-line { height: 5px; border-radius: 99px; background: #385577; width: 100%; }
+    .report-line.short { width: 63%; }
+    .report-footer { margin-top: auto; color: #91b9f2; font-size: 9px; font-weight: 700; }
+    .rag-visual { display: flex; position: absolute; top: 58px; left: 24px; right: 24px; bottom: 16px; align-items: center; gap: 10px; }
+    .doc-stack { display: grid; gap: 5px; flex: 1; }
+    .doc-stack > div { border: 1px solid #7566aa; border-radius: 6px; color: #d7cdf5; background: #342b52; padding: 5px 9px; font-size: 10px; font-weight: 700; }
+    .rag-join { color: #bba6f4; font-size: 22px; }
+    .answer-card { flex: 1.25; align-self: stretch; display: flex; flex-direction: column; gap: 9px; border: 1px solid #766dba; background: #2b2852; border-radius: 9px; padding: 12px; color: #ddd8fd; font-size: 10px; font-weight: 700; }
+    .answer-card i { display: block; height: 5px; background: #59558d; border-radius: 9px; }
+    .answer-card i:nth-child(3) { width: 75%; }
+    .answer-card small { font-size: 8px; color: #bcaff5; font-weight: 500; margin-top: auto; }
+    .booking-visual { position: absolute; top: 52px; bottom: 17px; left: 24px; right: 24px; display: grid; grid-template-columns: 52px 1fr; gap: 8px; }
+    .book-times { display: flex; flex-direction: column; justify-content: space-between; color: #a5b6ce; font-size: 10px; text-align: right; padding-block: 9px; }
+    .book-canvas { position: relative; overflow: hidden; border: 1px solid #4b5067; border-radius: 8px; background: repeating-linear-gradient(to bottom, #202b3c, #202b3c 25px, #344153 26px); }
+    .book-event { position: absolute; background: #3769c6; color: #f2f6ff; font-size: 10px; font-weight: 700; padding: 9px 12px; border-radius: 6px; left: 8%; width: 51%; top: 15px; height: 35px; }
+    .book-event.alt { top: 62px; background: #327a70; left: 44%; width: 49%; }
+    .fraud-flow { position: absolute; inset: 56px 24px 24px; display: flex; align-items: center; gap: 9px; }
+    .fraud-step { flex: 1; min-width: 0; display: grid; justify-items: center; text-align: center; gap: 11px; border: 1px solid #3c7475; border-radius: 10px; background: #143b40; color: #a4e1d7; padding: 19px 6px; }
+    .fraud-step .icon { width: 23px; height: 23px; }
+    .fraud-step strong { font-size: 10px; line-height: 1.35; color: #e0f1f2; }
+    .fraud-arrow { color: #b8dbd9; font-size: 20px; }
+    .card-body { padding: 22px 23px 23px; display: flex; flex-direction: column; flex: 1; }
+    .category { margin: 0 0 7px; color: var(--blue); font-size: 10px; font-weight: 750; text-transform: uppercase; letter-spacing: .075em; }
+    .cat-rag { color: var(--violet); }
+    .cat-backend { color: var(--amber); }
+    .cat-fraud { color: var(--mint); }
+    .card-body h3 { margin: 0 0 10px; font-size: 20px; letter-spacing: -.03em; font-weight: 750; }
+    .card-body > p:not(.category) { margin: 0 0 19px; color: var(--muted); line-height: 1.8; font-size: 13px; max-width: 515px; }
+    .card-bottom { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 11px; margin-top: auto; padding-top: 15px; border-top: 1px solid var(--stroke-soft); }
+    .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+    .tags span { border: 1px solid var(--stroke); border-radius: 5px; padding: 4px 7px; font-size: 9px; color: var(--muted); font-weight: 700; }
+    .project-open { background: transparent; border: 0; color: var(--blue); display: inline-flex; gap: 5px; align-items: center; font-size: 11px; font-weight: 750; padding: 5px 0; }
+    .project-open:hover { text-decoration: underline; }
+    .research-layout { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 17px; }
+    .research-card { min-width: 0; padding: 25px; border: 1px solid var(--stroke); border-radius: 15px; background: var(--panel); }
+    .research-symbol { width: 48px; height: 48px; border-radius: 12px; display: grid; place-items: center; background: var(--panel-2); color: var(--blue); border: 1px solid var(--stroke); margin-bottom: 20px; }
+    .research-symbol .icon { width: 25px; height: 25px; }
+    .research-card h3 { margin: 0 0 11px; font-weight: 750; font-size: 16px; letter-spacing: -.02em; }
+    .research-card p { margin: 0 0 19px; color: var(--muted); font-size: 12px; line-height: 1.85; }
+    .research-card a { color: var(--blue); font-size: 11px; font-weight: 750; }
+    .approach { border: 1px solid var(--stroke); border-radius: 17px; padding: 29px; background: var(--panel); display: grid; grid-template-columns: 1.05fr 2fr; gap: 33px; align-items: center; }
+    .approach h2 { font-size: 27px; margin: 10px 0 13px; line-height: 1.3; letter-spacing: -.045em; }
+    .approach > div > p:last-child { color: var(--muted); font-size: 13px; margin: 0; }
+    .approach-list { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 9px; }
+    .approach-list > div { border: 1px solid var(--stroke); background: var(--page-2); border-radius: 12px; padding: 17px; }
+    .approach-list span { color: var(--blue); font-size: 10px; font-weight: 750; }
+    .approach-list h3 { font-size: 13px; margin: 10px 0 8px; }
+    .approach-list p { color: var(--muted); font-size: 11px; line-height: 1.8; margin: 0; }
+    .pub-list { border-top: 1px solid var(--stroke); }
+    .publication { display: grid; grid-template-columns: 80px 1fr 30px; gap: 24px; align-items: start; padding: 22px 2px; border-bottom: 1px solid var(--stroke); }
+    .pub-year { font-size: 12px; font-weight: 750; color: var(--blue); padding-top: 4px; }
+    .pub-title { font-size: 15px; font-weight: 700; letter-spacing: -.02em; line-height: 1.6; margin: 0 0 4px; }
+    .publication p { margin: 0; color: var(--soft); font-size: 11px; }
+    .pub-arr { color: var(--soft); }
+    .publication:hover .pub-arr, .publication:hover .pub-title { color: var(--blue); }
+    .contact-box { background: linear-gradient(120deg, #17448f, #123361 72%, #102d52); color: #f5f8ff; border: 1px solid #4373ae; border-radius: 20px; display: flex; justify-content: space-between; align-items: center; gap: 30px; padding: 38px 43px; }
+    .contact-box .overline { color: #aaceff; }
+    .contact-box h2 { font-size: clamp(25px,3vw,35px); line-height: 1.22; margin-bottom: 11px; letter-spacing: -.045em; }
+    .contact-box p:last-child { font-size: 13px; color: #c2d5f0; margin: 0; }
+    .contact-box .btn { background: #fff; color: #12386d; border: 1px solid #fff; white-space: nowrap; }
+    .footer { padding-top: 32px; padding-bottom: 34px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px 25px; font-size: 11px; color: var(--soft); }
+    .footer a:hover { color: var(--blue); }
+    .footer-links { display: flex; gap: 20px; }
+    dialog { width: min(530px, calc(100% - 40px)); padding: 0; border-radius: 17px; background: var(--panel); color: var(--ink); border: 1px solid var(--stroke); box-shadow: 0 32px 90px #0009; }
+    dialog::backdrop { background: #040915b8; backdrop-filter: blur(6px); }
+    .dialog-body { padding: 26px 30px 30px; }
+    .dialog-header { display: flex; justify-content: space-between; gap: 14px; align-items: start; }
+    .dialog-header h2 { font-size: 25px; letter-spacing: -.04em; line-height: 1.25; margin: 5px 0 20px; }
+    .dialog-close { border: 1px solid var(--stroke); color: var(--muted); background: var(--panel-2); border-radius: 8px; width: 32px; height: 32px; font-size: 21px; line-height: 1; }
+    .dialog-section { border-top: 1px solid var(--stroke); padding-top: 15px; }
+    .dialog-section strong { display: block; font-size: 12px; margin-bottom: 7px; color: var(--blue); }
+    .dialog-section p { color: var(--muted); font-size: 13px; margin: 0 0 19px; }
+    .dialog-footer { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+    @media (max-width: 1080px) {
+      .nav { gap: 14px; }
+      .hero { grid-template-columns: 1fr 1fr; gap: 35px; padding-top: 70px; }
+      .hero h1 { font-size: clamp(45px, 5vw, 64px); }
+      .system-panel { padding: 19px; }
+      .flow-diagram { gap: 7px; }
+      .flow-step { min-height: 87px; }
+      .skills-strip { justify-content: flex-start; gap: 12px 26px; }
+      .skills-strip strong { width: 100%; }
+    }
+    @media (max-width: 770px) {
+      html { scroll-padding-top: 84px; }
+      .wrap { width: min(100% - 34px, 580px); }
+      .head-inner { min-height: 68px; flex-wrap: wrap; }
+      .brand-sub { display: none; }
+      .nav { display: none; order: 3; width: 100%; margin: 0; padding: 2px 0 15px; }
+      .nav.open { display: flex; flex-direction: column; align-items: stretch; gap: 1px; }
+      .nav a { padding: 12px; border-radius: 7px; font-size: 13px; }
+      .nav a:hover, .nav a.active { background: var(--panel-2); box-shadow: none; }
+      .head-actions { margin-left: auto; }
+      .small-cta { display: none; }
+      .menu-toggle { display: grid; }
+      .hero { grid-template-columns: 1fr; gap: 36px; padding-top: 67px; padding-bottom: 40px; }
+      .hero h1 { font-size: clamp(36px, 8.3vw, 48px); }
+      .hero-lead { font-size: 15px; }
+      .system-panel { max-width: 580px; }
+      .section { padding-top: 79px; }
+      .section-heading { align-items: start; flex-direction: column; gap: 13px; }
+      .project-card { grid-column: span 12; }
+      .research-layout { grid-template-columns: 1fr; }
+      .research-card { padding: 22px; }
+      .approach { grid-template-columns: 1fr; gap: 22px; padding: 25px; }
+      .approach-list { grid-template-columns: 1fr; }
+      .contact-box { padding: 30px; flex-direction: column; align-items: flex-start; }
+      .filter-note { width: 100%; margin-left: 0; }
+    }
+    @media (max-width: 390px) {
+      .hero h1 { font-size: 41px; }
+      .hero-links .btn { width: 100%; }
+      .system-panel { padding: 16px; }
+      .flow-step { min-height: 78px; gap: 7px; }
+      .flow-step .icon { width: 21px; height: 21px; }
+      .flow-step strong { font-size: 9px; }
+      .flow-step:not(:last-child)::after { right: -10px; }
+      .art-table { inset-inline: 12px; }
+      .rag-visual, .booking-visual { left: 12px; right: 12px; }
+      .fraud-flow { left: 12px; right: 12px; gap: 4px; }
+      .fraud-step { padding-inline: 2px; }
+      .fraud-arrow { font-size: 13px; }
+      .publication { gap: 12px; grid-template-columns: 45px 1fr 18px; }
+      .card-body { padding: 19px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *,*::before,*::after { transition: none !important; animation: none !important; }
+    }
+  
+/* Expanded portfolio website preview: compact work collection and complete directory. */
+.more-work-section { padding-top: 88px; }
+.more-work-header { max-width: 610px; }
+.more-work-header .more-intro { color: var(--muted); font-size: 14px; line-height: 1.75; }
+.more-work-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 15px; }
+.catalog-card { min-width: 0; background: var(--panel); border: 1px solid var(--stroke); border-radius: 15px; padding: 21px; display: flex; flex-direction: column; min-height: 237px; transition: transform .16s,border-color .16s; }
+.catalog-card:hover { border-color: #4e78b6; transform: translateY(-3px); }
+.catalog-card[hidden], .full-item[hidden] { display:none !important; }
+.catalog-card-top { display:flex; align-items:center; gap:11px; margin-bottom:20px; }
+.catalog-icon { width:37px; height:37px; flex:none; display:grid; place-items:center; border-radius:10px; color:var(--blue); background:var(--panel-2); border:1px solid var(--stroke); }
+.catalog-icon .icon { width:18px; height:18px; }
+.catalog-cat { font-size:10px; font-weight:750; color:var(--soft); letter-spacing:.035em; }
+.catalog-card h3 { font-size:16px; letter-spacing:-.025em; line-height:1.32; margin:0 0 10px; font-weight:750; }
+.catalog-card p { font-size:12px; color:var(--muted); line-height:1.68; margin:0 0 19px; }
+.catalog-bottom { display:flex; justify-content:space-between; align-items:flex-end; gap:9px; margin-top:auto; border-top:1px solid var(--stroke-soft); padding-top:14px; flex-wrap:wrap; }
+.catalog-tags { display:flex; flex-wrap:wrap; gap:6px; }
+.catalog-tags span { font-size:9px; line-height:1.5; color:var(--soft); }
+.catalog-tags span:not(:last-child)::after { content:' ·'; padding-left:6px; }
+.catalog-open { border:0; background:none; color:var(--blue); padding:2px 0; font-size:10px; white-space:nowrap; display:inline-flex; align-items:center; gap:3px; font-weight:750; }
+.catalog-open .icon { width:13px; height:13px; }
+.catalog-open:hover { text-decoration:underline; }
+.more-actions { display:flex; justify-content:center; padding-top:26px; }
+.more-actions .btn { min-width:212px; }
+.section-divider { border:0; border-top:1px solid var(--stroke-soft); margin:0; }
+.full-directory { scroll-margin-top:95px; margin-top:55px; border:1px solid var(--stroke); background:var(--panel); border-radius:17px; overflow:hidden; }
+.full-directory > summary { cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:22px 25px; list-style:none; }
+.full-directory > summary::-webkit-details-marker {display:none;}
+.full-directory > summary strong { font-size:16px; }
+.full-directory > summary small { display:block; color:var(--muted); font-size:12px; margin-top:4px; }
+.full-directory > summary .directory-plus { width:28px; height:28px; border:1px solid var(--stroke); border-radius:50%; display:grid; place-items:center; color:var(--blue); flex:none; }
+.full-directory[open] > summary .directory-plus {transform:rotate(45deg);}
+.full-directory-inner { padding:0 25px 25px; }
+.full-directory-items { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1px 24px; }
+.full-item { padding:13px 0; border-top:1px solid var(--stroke-soft); display:flex; align-items:center; gap:15px; justify-content:space-between; min-width:0; }
+.full-item strong { font-size:12px; display:block; }
+.full-item span { color:var(--soft); font-size:10px; }
+.full-item button { flex:none; background:transparent; border:1px solid var(--stroke); color:var(--blue); padding:6px 10px; border-radius:7px; font-size:11px; font-weight:650; }
+.full-item button:hover {background:var(--panel-2);}
+.directory-intro { padding-top:65px; padding-bottom:22px; }
+.directory-intro h1 { max-width:850px; font-size:clamp(40px,5.7vw,72px); line-height:1.09; letter-spacing:-.06em; font-weight:800; margin:13px 0 22px; }
+.directory-intro h1 span { color:var(--blue); }
+.directory-intro p:last-child { font-size:16px; max-width:660px; color:var(--muted); line-height:1.8; }
+.directory-counts { display:flex; gap:28px; flex-wrap:wrap; padding-top:10px; }
+.directory-counts > div { border-left:1px solid var(--stroke); padding-left:17px; }
+.directory-counts strong { display:block; font-size:22px; letter-spacing:-.03em; }
+.directory-counts small { font-size:10px; color:var(--soft); text-transform:uppercase; letter-spacing:.06em; }
+.catalog-tools { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:13px; margin:30px 0 22px; }
+.catalog-search { min-height:43px; min-width:min(270px,100%); width:340px; flex:1; max-width:390px; padding:10px 15px; color:var(--ink); background:var(--panel); border:1px solid var(--stroke); border-radius:10px; font:inherit; font-size:13px; }
+.catalog-search:focus-visible {outline:2px solid var(--blue); outline-offset:3px;}
+.catalog-filters { display:flex; flex-wrap:wrap; gap:7px; }
+.catalog-filters button { padding:9px 12px; border-radius:25px; border:1px solid var(--stroke); background:var(--panel); color:var(--muted); font-size:11px; font-weight:700; }
+.catalog-filters button[aria-pressed="true"] { background:#2c63d2; color:#fff; border-color:#2c63d2; }
+.catalog-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+.catalog-grid .catalog-card { min-height:246px; }
+.catalog-status { color:var(--soft); font-size:12px; min-height:20px; }
+.catalog-empty { text-align:center; padding:30px; color:var(--muted); border:1px dashed var(--stroke); border-radius:12px; }
+.site-note { font-size:12px; color:var(--muted); max-width:760px; margin-top:25px; }
+@media(max-width:1100px) { .more-work-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } .catalog-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .nav {gap:15px;} }
+@media(max-width:770px) { .more-work-section {padding-top:70px;} .more-work-grid, .catalog-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .catalog-card {padding:18px;} .catalog-tools {align-items:stretch;} .catalog-search {width:100%;max-width:none;} .full-directory-items {grid-template-columns:1fr;} .directory-intro {padding-top:44px;} }
+@media(max-width:540px) { .more-work-grid, .catalog-grid {grid-template-columns:1fr;} .catalog-card {min-height:193px;} .directory-counts {gap:18px;} .catalog-filters button {font-size:10px;padding:8px 10px;} .full-directory > summary {padding:18px;} .full-directory-inner {padding-inline:18px;} }
+
+</style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 8-4 4 4 4m8-8 4 4-4 4m-3-13-2 14"/></symbol>
+    <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v7c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12v7c0 1.7 3.6 3 8 3s8-1.3 8-3v-7"/></symbol>
+    <symbol id="i-chip" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2"/><path d="M9 9h6v6H9zM9 1v4m6-4v4M9 19v4m6-4v4M1 9h4M1 15h4m14-6h4m-4 6h4"/></symbol>
+    <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M2 12h4l3-7 5 14 3-7h5"/></symbol>
+    <symbol id="i-git" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M6 8v4a6 6 0 0 0 6 6m6-10v4a6 6 0 0 1-6 6"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M13 2v7h7M8 13h8M8 17h8"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2 20 6v5c0 5-3.2 8.5-8 11-4.8-2.5-8-6-8-11V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 9 5-9 5-9-5zM3 12l9 5 9-5M3 17l9 5 9-5"/></symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="m6 8 4 4-4 4m7 0h5"/></symbol>
+    <symbol id="i-cube" viewBox="0 0 24 24"><path d="m12 2 9 5v10l-9 5-9-5V7zM3 7l9 5 9-5m-9 5v10"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 8L22 6"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 15.5A8.5 8.5 0 0 1 8.5 4 8.5 8.5 0 1 0 20 15.5Z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 5a9 9 0 0 0-9-2v16a9 9 0 0 1 9 2m0-16a9 9 0 0 1 9-2v16a9 9 0 0 0-9 2M12 5v16"/></symbol>
+    <symbol id="i-robot" viewBox="0 0 24 24"><path d="m4 20 4-5 3 3 4-6 4 3M5 20h14M8 15l-3-4 6-6 4 3-4 7M14 5l2-2 3 3-3 2"/></symbol>
+    <symbol id="i-brain" viewBox="0 0 24 24"><path d="M12 4c-3-3-8-.4-8 3v1c-3 2-2 6 0 7-.8 4 3.5 6 6 4l2-1V4Zm0 0c3-3 8-.4 8 3v1c3 2 2 6 0 7 .8 4-3.5 6-6 4l-2-1V4ZM8 9l-2 2m2 4 2-2m6-4 2 2m-2 4-2-2"/></symbol>
+  </svg>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header"><div class="wrap head-inner"><a href="index.html" class="brand" aria-label="Back to homepage"><span class="brand-symbol">A</span><span class="brand-copy"><span class="brand-name">Arash</span><span class="brand-sub">APPLIED AI · ENGINEERING</span></span></a>
+<nav class="nav" id="primary-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="index.html#projects">Featured</a><a href="index.html#more-work">More work</a><a href="index.html#research">Research</a><a class="active" href="#main">All projects</a><a href="index.html#publications">Publications</a><a href="index.html#contact">Contact</a></nav>
+<div class="head-actions"><button class="icon-button" id="theme-toggle" title="Switch light/dark theme" aria-label="Switch to light theme"><svg class="icon" aria-hidden="true"><use href="#i-brain"/></svg></button><a class="small-cta" href="https://arash80.github.io/my-page/resume.html" target="_blank" rel="noopener noreferrer">Résumé <svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></a><button class="icon-button menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-controls="primary-nav" aria-expanded="false"><svg class="icon"><use href="#i-menu"/></svg></button></div></div></header>
+<main id="main" class="wrap">
+<section class="directory-intro"><p class="eyebrow"><span class="pulse" aria-hidden="true"></span> All projects · Selected research</p><h1>The work.<br><span>Beyond the highlights.</span></h1><p>Explore the complete set of engineering projects and research topics. Search by technology or problem, filter by area, and open a project to see its approach.</p><div class="directory-counts"><div><strong>19</strong><small>Projects &amp; research</small></div><div><strong>6</strong><small>Focus areas</small></div><div><strong>4</strong><small>Homepage highlights</small></div></div></section>
+<section class="section" aria-labelledby="catalog-title" style="padding-top:40px"><div class="section-heading"><div><p class="overline">Project directory</p><h2 id="catalog-title">Find a project.</h2><p>Filterable work across AI, data, backend, and intelligent systems.</p></div><a class="small-link" href="index.html#projects">Back to featured work <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></a></div>
+<div class="catalog-tools"><input id="catalog-search" class="catalog-search" type="search" placeholder="Search projects, skills, topics…" aria-label="Search all projects"><div class="catalog-filters" role="group" aria-label="Filter all projects"><button data-catalog-filter="all" aria-pressed="true">All</button><button data-catalog-filter="mlops" aria-pressed="false">ML &amp; MLOps</button><button data-catalog-filter="genai" aria-pressed="false">GenAI &amp; RAG</button><button data-catalog-filter="backend" aria-pressed="false">Backend</button><button data-catalog-filter="data" aria-pressed="false">Data</button><button data-catalog-filter="trustworthy" aria-pressed="false">Trustworthy AI</button><button data-catalog-filter="research" aria-pressed="false">Research</button></div></div>
+<p class="catalog-status" id="catalog-status" role="status" aria-live="polite">Showing all 19 projects</p>
+<div class="catalog-grid" id="catalog-grid"><article class="catalog-card" data-category="mlops" data-search="aegisops credit-risk model governance, monitored serving, and read-only incident investigation. xgboost fastapi langgraph ml &amp; mlops"><div class="catalog-card-top"><div class="catalog-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></div><span class="catalog-cat">ML &amp; MLOps</span></div><h3>AegisOps</h3><p>Credit-risk model governance, monitored serving, and read-only incident investigation.</p><div class="catalog-bottom"><div class="catalog-tags"><span>XGBoost</span><span>FastAPI</span><span>LangGraph</span></div><button type="button" data-open="aegisops" class="catalog-open" aria-label="Details for AegisOps">Quick view <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></button></div></article><article class="catalog-card" data-category="genai" data-search="techrag local local technical-pdf question answering with inspectable citations and shared api/ui logic. ollama retrieval fastapi genai &amp; rag"><div class="catalog-card-top"><div class="catalog-icon"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></div><span class="catalog-cat">GenAI &amp; RAG</span></div><h3>TechRAG Local</h3><p>Local technical-PDF question answering with inspectable citations and shared API/UI logic.</p><div class="catalog-bottom"><div class="catalog-tags"><span>Ollama</span><span>Retrieval</span><span>FastAPI</span></div><button type="button" data-open="techrag" class="catalog-open" aria-label="Details for TechRAG Local">Quick view <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></button></div></article><article class="catalog-card" data-category="backend" data-search="workplaceops room-booking api with authorization and database-enforced reservation integrity. fastapi postgresql sqlalchemy python backend"><div class="catalog-card-top"><div class="catalog-icon"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></div><span class="catalog-cat">Python Backend</span></div><h3>WorkplaceOps</h3><p>Room-booking API with authorization and database-enforced reservation integrity.</p><div class="catalog-bottom"><div class="catalog-tags"><span>FastAPI</span><span>PostgreSQL</span><span>SQLAlchemy</span></div><button type="button" data-open="workplaceops" class="catalog-open" aria-label="Details for WorkplaceOps">Quick view <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></button></div></article><article class="catalog-card" data-category="mlops" data-search="fraud detection mlops time-aware fraud modeling, calibration, experiment tracking, and deployment workflows. airflow mlflow sagemaker ml &amp; mlops"><div class="catalog-card-top"><div class="catalog-icon"><svg class="icon" aria-hidden="true"><use href="#i-pulse"/></svg></div><span class="catalog-cat">ML &amp; MLOps</span></div><h3>Fraud Detection MLOps</h3><p>Time-aware fraud modeling, calibration, experiment tracking, and deployment workflows.</p><div class="catalog-bottom"><div class="catalog-tags"><span>Airflow</span><span>MLflow</span><span>SageMaker</span></div><button type="button" data-open="fraud" class="catalog-open" aria-label="Details for Fraud Detection MLOps">Quick view <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></button></div></article><article class="catalog-card" data-category="genai" data-search="alignmentops lora supervised fine-tuning and controlled base-versus-adapter llm evaluation. pytorch lora trl genai &amp; rag"><div class="catalog-card-top"><div class="catalog-icon"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg></div><span class="catalog-cat">GenAI &amp; RAG</span></div><h3>AlignmentOps</h3><p>LoRA supervised fine-tuning and controlled base-versus-adapter LLM evaluation.</p><div class="catalog-bottom"><div class="catalog-tags"><span>PyTorch</span><span>LoRA</span><span>TRL</span></div><button type="button" data-open="alignmentops" class="catalog-open" aria-label="Details for AlignmentOps">Quick view <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></button></div></article><article class="catalog-card" data-category="trustworthy" data-search="metrictrace auditable calculation engine that keeps metrics separate from ai explanations. pydantic python testing trustworthy ai"><div class="catalog-card-top"><div class="catalog-icon"><svg class="icon" aria-hidden="true"><use href="#i-pulse"/></svg></div><span class="catalog-cat">Trustworthy AI</span></div><h3>MetricTrace</h3><p>Auditable calculation engine that keeps metrics separate from AI explanations.</p><div class="catalog-bottom"><div class="catalog-tags"><span>Pydantic</span><span>Python</span><span>Testing</span></div><button type="button" data-open="metrictrace" class="catalog-open" aria-label="Details for MetricTrace">Quick view <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></button></div></article><article class="catalog-card" data-category="genai" data-search="advanced agentic rag hybrid retrieval, reranking, evidence sufficiency, and corrective answer routing. langchain bm25 reranking genai &amp; rag"><div class="catalog-card-top"><div class="catalog-icon"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></div><span class="catalog-cat">GenAI &amp; RAG</span></div><h3>Advanced Agentic RAG</h3><p>Hybrid retrieval, reranking, evidence sufficiency, and corrective answer routing.</p><div class="catalog-bottom"><div class="catalog-tags"><span>LangChain</span><span>BM25</span><span>Reranking</span></div><button type="button" data-open="agenticrag" class="catalog-open" aria-label="Details for Advanced Agentic RAG">Quick view <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></button></div></article><article class="catalog-card" data-category="genai" data-search="deskpilot private, local help-desk assistant across csv, sqlite, and pdf data. ollama chroma streamlit genai &amp; rag"><div class="catalog-card-top"><div class="catalog-icon"><svg class="icon" aria-hidden="true"><use href="#i-terminal"/></svg></div><span class="catalog-cat">GenAI &amp; RAG</span></div><h3>DeskPilot</h3><p>Private, local help-desk assistant across CSV, SQLite, and PDF data.</p><div class="catalog-bottom"><div class="catalog-tags"><span>Ollama</span><span>Chroma</span><span>Streamlit</span></div><button type="button" data-open="deskpilot" class="catalog-open" aria-label="Details for DeskPilot">Quick view <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></button></div></article><article class="catalog-card" data-category="data" data-search="nasa apod pipeline repeatable airflow ingestion of nasa apod records into postgresql. airflow postgresql docker data engineering"><div class="catalog-card-top"><div class="catalog-icon"><svg class="icon" aria-hidden="true"><use href="#i-database"/></svg></div><span class="catalog-cat">Data Engineering</span></div><h3>NASA APOD Pipeline</h3><p>Repeatable Airflow ingestion of NASA APOD records into PostgreSQL.</p><div class="catalog-bottom"><div class="catalog-tags"><span>Airflow</span><span>PostgreSQL</span><span>Docker</span></div><button type="button" data-open="nasa" class="catalog-open" aria-label="Details for NASA APOD Pipeline">Quick view <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></button></div></article><article class="catalog-card" data-category="mlops" data-search="chest x-ray diagnosis patient-disjoint deep-learning evaluation and gradcam visual explanations. pytorch densenet121 gradcam ml &amp; mlops"><div class="catalog-card-top"><div class="catalog-icon"><svg class="icon" aria-hidden="true"><use href="#i-chip"/></svg></div><span class="catalog-cat">ML &amp; MLOps</span></div><h3>Chest X-Ray Diagnosis</h3><p>Patient-disjoint deep-learning evaluation and GradCAM visual explanations.</p><div class="catalog-bottom"><div class="catalog-tags"><span>PyTorch</span><span>DenseNet121</span><span>GradCAM</span></div><button type="button" data-open="chestxray" class="catalog-open" aria-label="Details for Chest X-Ray Diagnosis">Quick view <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></button></div></article><article class="catalog-card" data-category="genai" data-search="fraudscope agents local multi-agent data analysis with guarded execution and deterministic reports. autogen ollama pandas genai &amp; rag"><div class="catalog-card-top"><div class="catalog-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></div><span class="catalog-cat">GenAI &amp; RAG</span></div><h3>FraudScope Agents</h3><p>Local multi-agent data analysis with guarded execution and deterministic reports.</p><div class="catalog-bottom"><div class="catalog-tags"><span>AutoGen</span><span>Ollama</span><span>pandas</span></div><button type="button" data-open="fraudscope" class="catalog-open" aria-label="Details for FraudScope Agents">Quick view <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></button></div></article><article class="catalog-card" data-category="genai" data-search="cybergraphrag graph-enhanced cybersecurity research retrieval with page-level citations. neo4j graphrag ollama genai &amp; rag"><div class="catalog-card-top"><div class="catalog-icon"><svg class="icon" aria-hidden="true"><use href="#i-git"/></svg></div><span class="catalog-cat">GenAI &amp; RAG</span></div><h3>CyberGraphRAG</h3><p>Graph-enhanced cybersecurity research retrieval with page-level citations.</p><div class="catalog-bottom"><div class="catalog-tags"><span>Neo4j</span><span>GraphRAG</span><span>Ollama</span></div><button type="button" data-open="cybergraph" class="catalog-open" aria-label="Details for CyberGraphRAG">Quick view <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></button></div></article><article class="catalog-card" data-category="genai" data-search="reflexion agent bounded draft–critique–research–revise agent graph. langgraph pydantic pytest genai &amp; rag"><div class="catalog-card-top"><div class="catalog-icon"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg></div><span class="catalog-cat">GenAI &amp; RAG</span></div><h3>Reflexion Agent</h3><p>Bounded draft–critique–research–revise agent graph.</p><div class="catalog-bottom"><div class="catalog-tags"><span>LangGraph</span><span>Pydantic</span><span>pytest</span></div><button type="button" data-open="reflexion" class="catalog-open" aria-label="Details for Reflexion Agent">Quick view <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></button></div></article><article class="catalog-card" data-category="research" data-search="probabilistic roadmap planner reproducible matlab sampling-based motion planning with collision checks. matlab robotics planning research &amp; control"><div class="catalog-card-top"><div class="catalog-icon"><svg class="icon" aria-hidden="true"><use href="#i-robot"/></svg></div><span class="catalog-cat">Research &amp; Control</span></div><h3>Probabilistic Roadmap Planner</h3><p>Reproducible MATLAB sampling-based motion planning with collision checks.</p><div class="catalog-bottom"><div class="catalog-tags"><span>MATLAB</span><span>Robotics</span><span>Planning</span></div><button type="button" data-open="prm" class="catalog-open" aria-label="Details for Probabilistic Roadmap Planner">Quick view <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></button></div></article><article class="catalog-card" data-category="research" data-search="two-link robot dynamics planar manipulator inverse kinematics, nonlinear dynamics, and simulation. matlab simulink dynamics research &amp; control"><div class="catalog-card-top"><div class="catalog-icon"><svg class="icon" aria-hidden="true"><use href="#i-robot"/></svg></div><span class="catalog-cat">Research &amp; Control</span></div><h3>Two-Link Robot Dynamics</h3><p>Planar manipulator inverse kinematics, nonlinear dynamics, and simulation.</p><div class="catalog-bottom"><div class="catalog-tags"><span>MATLAB</span><span>Simulink</span><span>Dynamics</span></div><button type="button" data-open="twolink" class="catalog-open" aria-label="Details for Two-Link Robot Dynamics">Quick view <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></button></div></article><article class="catalog-card" data-category="research" data-search="rl desalination control deep reinforcement learning for energy-aware reverse-osmosis operation. rl optimization control research &amp; control"><div class="catalog-card-top"><div class="catalog-icon"><svg class="icon" aria-hidden="true"><use href="#i-brain"/></svg></div><span class="catalog-cat">Research &amp; Control</span></div><h3>RL Desalination Control</h3><p>Deep reinforcement learning for energy-aware reverse-osmosis operation.</p><div class="catalog-bottom"><div class="catalog-tags"><span>RL</span><span>Optimization</span><span>Control</span></div><button type="button" data-open="desalination" class="catalog-open" aria-label="Details for RL Desalination Control">Quick view <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></button></div></article><article class="catalog-card" data-category="trustworthy" data-search="hardware trojan detection dual-stage deep learning and uncertainty-aware detection of hardware trojans. deep learning uncertainty security trustworthy ai"><div class="catalog-card-top"><div class="catalog-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></div><span class="catalog-cat">Trustworthy AI</span></div><h3>Hardware Trojan Detection</h3><p>Dual-stage deep learning and uncertainty-aware detection of hardware Trojans.</p><div class="catalog-bottom"><div class="catalog-tags"><span>Deep Learning</span><span>Uncertainty</span><span>Security</span></div><button type="button" data-open="hardware" class="catalog-open" aria-label="Details for Hardware Trojan Detection">Quick view <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></button></div></article><article class="catalog-card" data-category="research" data-search="bayesian lpv identification bayesian identification of parameter-varying process models. bayesian models lpv control research &amp; control"><div class="catalog-card-top"><div class="catalog-icon"><svg class="icon" aria-hidden="true"><use href="#i-pulse"/></svg></div><span class="catalog-cat">Research &amp; Control</span></div><h3>Bayesian LPV Identification</h3><p>Bayesian identification of parameter-varying process models.</p><div class="catalog-bottom"><div class="catalog-tags"><span>Bayesian Models</span><span>LPV</span><span>Control</span></div><button type="button" data-open="lpv" class="catalog-open" aria-label="Details for Bayesian LPV Identification">Quick view <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></button></div></article><article class="catalog-card" data-category="trustworthy" data-search="distributed edge ai distributed inference and adversarial-feature detection on raspberry pi hardware. pytorch raspberry pi security trustworthy ai"><div class="catalog-card-top"><div class="catalog-icon"><svg class="icon" aria-hidden="true"><use href="#i-chip"/></svg></div><span class="catalog-cat">Trustworthy AI</span></div><h3>Distributed Edge AI</h3><p>Distributed inference and adversarial-feature detection on Raspberry Pi hardware.</p><div class="catalog-bottom"><div class="catalog-tags"><span>PyTorch</span><span>Raspberry Pi</span><span>Security</span></div><button type="button" data-open="edge" class="catalog-open" aria-label="Details for Distributed Edge AI">Quick view <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></button></div></article></div>
+<p id="catalog-empty" class="catalog-empty" hidden>No projects match your search. Try a different keyword or category.</p>
+<p class="site-note">Project summaries describe engineering contributions and research topics, not verified production performance numbers. Some case studies link to the original published portfolio while the new design is under review.</p>
+</section>
+<section class="section" style="padding-top:45px;padding-bottom:60px"><div class="contact-box"><div><p class="overline">Let’s connect</p><h2>Want to discuss a project?</h2><p>I'm happy to walk through the engineering decisions and research behind the work.</p></div><a class="btn" href="mailto:arash.shm62@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg> Contact Arash</a></div></section>
+</main>
+<footer class="footer wrap"><span>© 2026 Arash · Applied AI and engineering</span><div class="footer-links"><a href="index.html">Home</a><a href="https://github.com/Arash80" target="_blank" rel="noreferrer">GitHub</a><a href="https://arash80.github.io/my-page/" target="_blank" rel="noreferrer">Published website</a></div></footer>
+<dialog id="project-dialog" aria-labelledby="dialog-title"><div class="dialog-body"><div class="dialog-header"><div><p class="overline" id="dialog-type">Project overview</p><h2 id="dialog-title">Project</h2></div><button type="button" class="dialog-close" id="dialog-close" aria-label="Close project overview">×</button></div><div class="dialog-section"><strong>Problem</strong><p id="dialog-problem"></p><strong>Engineering approach</strong><p id="dialog-approach"></p><strong>What this demonstrates</strong><p id="dialog-outcome"></p></div><div class="dialog-footer"><a class="btn btn-primary" id="dialog-link" href="https://arash80.github.io/my-page/" target="_blank" rel="noopener noreferrer">View existing project <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></a><button type="button" class="btn btn-secondary" id="dialog-done">Close</button></div></div></dialog>
+<script>
+(()=>{'use strict';
+const root=document.documentElement;
+const themeButton=document.getElementById('theme-toggle');
+const menuButton=document.getElementById('menu-toggle');
+const nav=document.getElementById('primary-nav');
+const setTheme = () => {const light=root.dataset.theme==='light';themeButton.setAttribute('aria-label',light?'Switch to dark theme':'Switch to light theme');themeButton.innerHTML=light?'<svg class="icon"><use href="#i-moon"/></svg>':'<svg class="icon"><use href="#i-sun"/></svg>';};
+setTheme();themeButton.addEventListener('click',()=>{root.dataset.theme=root.dataset.theme==='light'?'dark':'light';setTheme();});
+menuButton.addEventListener('click',()=>{const expanded=!nav.classList.contains('open');nav.classList.toggle('open',expanded);menuButton.setAttribute('aria-expanded',String(expanded));});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuButton.setAttribute('aria-expanded','false');}));
+const records={"aegisops": {"title": "AegisOps", "label": "ML & MLOps", "problem": "A deployed credit-risk model needs reproducible training, safe promotion, reliable serving, and transparent incident investigation.", "approach": "Built deterministic preparation, model comparison, validation-only cost-sensitive thresholding, versioned promotion, FastAPI serving, monitoring evidence, and routed read-only LangGraph investigations.", "outcome": "A connected ML lifecycle with explicit governance boundaries; the investigation agent recommends actions but cannot modify production.", "link": "https://arash80.github.io/my-page/case-studies.html#aegisops"}, "techrag": {"title": "TechRAG Local", "label": "GenAI & RAG", "problem": "Answers about technical documents should be supported by passages readers can inspect.", "approach": "Implemented PDF extraction, sentence-transformer retrieval, local Ollama generation, upload safeguards, evidence display, Streamlit and FastAPI interfaces, and tests.", "outcome": "A document assistant with source, page, retrieved chunk, and latency information in the answer workflow.", "link": "https://github.com/Arash80/techrag-local"}, "workplaceops": {"title": "WorkplaceOps", "label": "Python Backend", "problem": "Concurrent reservations and changing access permissions require more than application-level checks.", "approach": "Separated FastAPI routes, services, and repositories; added JWT authentication, role-based checks, transactions, migrations, and PostgreSQL overlap protection.", "outcome": "A testable backend whose business and data-integrity rules remain enforced under concurrent requests.", "link": "https://github.com/Arash80"}, "fraud": {"title": "Fraud Detection MLOps", "label": "ML & MLOps", "problem": "Fraud prediction is sensitive to temporal leakage, class imbalance, calibration, and distribution change.", "approach": "Created time-ordered evaluation, LightGBM/XGBoost workflows, calibration and uncertainty checks, MLflow tracking, Airflow orchestration, API serving, and an AWS implementation path.", "outcome": "An integrated, reproducible modeling and delivery workflow designed beyond offline model accuracy.", "link": "https://github.com/Arash80/fraud-ml-platform"}, "alignmentops": {"title": "AlignmentOps", "label": "GenAI & RAG", "problem": "Adapting smaller language models needs careful data preparation and repeatable evaluation.", "approach": "Implemented curated OASST1 conversation preparation, completion-only LoRA fine-tuning, controlled base/adapted comparisons, and generation diagnostics.", "outcome": "A reproducible post-training workflow with explicit experiment and evaluation boundaries.", "link": "https://github.com/Arash80/alignmentops"}, "metrictrace": {"title": "MetricTrace", "label": "Trustworthy AI", "problem": "LLM-generated numerical analysis can be difficult to reproduce or audit.", "approach": "Designed validated schemas, deterministic calculation logic, evidence records, CLI/Streamlit interfaces, and an optional explanation layer.", "outcome": "A consistent metric computation contract across different user interfaces.", "link": "https://arash80.github.io/my-page/case-studies.html#metrictrace"}, "agenticrag": {"title": "Advanced Agentic RAG", "label": "GenAI & RAG", "problem": "One retrieval method may not provide enough supporting evidence across diverse document questions.", "approach": "Compared dense, sparse, hybrid, MMR, and multi-query retrieval with reranking, corrective routing, citations, and tracing.", "outcome": "A document QA testbed that makes weak-evidence handling and retrieval comparisons explicit.", "link": "https://arash80.github.io/my-page/case-studies.html#agentic-rag"}, "deskpilot": {"title": "DeskPilot", "label": "GenAI & RAG", "problem": "Support knowledge is fragmented across document and structured sources.", "approach": "Built multi-source ingestion, local retrieval and generation, source-grounded answers, escalation handling, tests, and CI.", "outcome": "A unified local knowledge interface spanning several source formats.", "link": "https://arash80.github.io/my-page/case-studies.html#deskpilot"}, "nasa": {"title": "NASA APOD Pipeline", "label": "Data Engineering", "problem": "Scheduled API ingestion must remain correct when rerun or interrupted.", "approach": "Developed a tested DAG, input validation, PostgreSQL upserts, containerized setup, and CI.", "outcome": "A reproducible, idempotent data workflow.", "link": "https://arash80.github.io/my-page/case-studies.html#etl-pipeline"}, "chestxray": {"title": "Chest X-Ray Diagnosis", "label": "ML & MLOps", "problem": "Medical image experiments can suffer from patient leakage and limited interpretability.", "approach": "Built patient-level splits, imbalance-aware training, AUROC reporting, MLflow tracking, and GradCAM explanations.", "outcome": "A reproducible experiment workflow connecting training, evaluation, and visualization.", "link": "https://github.com/Arash80/chest-xray-diagnosis"}, "fraudscope": {"title": "FraudScope Agents", "label": "GenAI & RAG", "problem": "Agent-generated analysis needs safeguards and traceable calculation sources.", "approach": "Implemented local agent roles, bounded code repair, guarded execution, deterministic pandas profiling, and structured outputs.", "outcome": "Agents coordinate reporting while trusted code produces the statistics.", "link": "https://arash80.github.io/my-page/fraudscope.html"}, "cybergraph": {"title": "CyberGraphRAG", "label": "GenAI & RAG", "problem": "Relationships across research documents can be lost in flat semantic search.", "approach": "Combined graph context, semantic retrieval, local text generation, and source-aware responses.", "outcome": "Responses connect relevant graph information to inspectable paper passages.", "link": "https://arash80.github.io/my-page/case-studies.html#cyber-graphrag"}, "reflexion": {"title": "Reflexion Agent", "label": "GenAI & RAG", "problem": "Unbounded reflection loops are difficult to test and control.", "approach": "Built structured graph state, bounded iterations, research and revision nodes, validation, and retries.", "outcome": "A controlled and testable refinement workflow.", "link": "https://arash80.github.io/my-page/case-studies.html#reflexion-agent"}, "prm": {"title": "Probabilistic Roadmap Planner", "label": "Research & Control", "problem": "Roadmaps need collision-safe connectivity, reproducibility, and graceful failure handling.", "approach": "Implemented seeded sampling, segment-obstacle checks, weighted graphs, shortest paths, and MATLAB tests.", "outcome": "Reusable path-planning logic separated from a legacy GUI.", "link": "https://arash80.github.io/my-page/case-studies.html#prm-planner"}, "twolink": {"title": "Two-Link Robot Dynamics", "label": "Research & Control", "problem": "Cartesian robot positioning requires handling coupled dynamics and actuation.", "approach": "Documented a MATLAB/Simulink model with inverse kinematics, dynamics, motor parameters, and animation.", "outcome": "A preserved control and modeling project with an explicit legacy simulation scope.", "link": "https://arash80.github.io/my-page/case-studies.html#two-link-robot"}, "desalination": {"title": "RL Desalination Control", "label": "Research & Control", "problem": "Desalination operation must balance energy, demand, production, and process constraints.", "approach": "Developed learning-based operational policies under variable renewable energy and operating conditions.", "outcome": "Peer-reviewed research connecting sequential decisions to physical process operation.", "link": "https://doi.org/10.1007/s10489-024-05452-8"}, "hardware": {"title": "Hardware Trojan Detection", "label": "Trustworthy AI", "problem": "Security detection must account for noisy measurements and overlapping attack classes.", "approach": "Combined representations, staged classifiers, and Monte Carlo dropout in hardware-Trojan analysis.", "outcome": "Published research on robust detection and identification.", "link": "https://doi.org/10.1007/s10207-025-01049-5"}, "lpv": {"title": "Bayesian LPV Identification", "label": "Research & Control", "problem": "A fixed model may not capture a process across changing operating conditions.", "approach": "Studied Bayesian estimation for linear parameter-varying process dynamics.", "outcome": "Peer-reviewed identification research with control-system applications.", "link": "https://doi.org/10.1109/TCST.2016.2642159"}, "edge": {"title": "Distributed Edge AI", "label": "Trustworthy AI", "problem": "Intermediate features in partitioned models can be manipulated or corrupted.", "approach": "Evaluated partitioned inference with injected feature perturbations, Mahalanobis detection, and real-device measurement.", "outcome": "An edge-AI study connecting robustness testing to physical devices.", "link": "https://arash80.github.io/my-page/case-studies.html#distributed-edge-ai"}};
+const catalog=Array.from(document.querySelectorAll('.catalog-grid .catalog-card'));
+const search=document.getElementById('catalog-search');const status=document.getElementById('catalog-status');const filters=Array.from(document.querySelectorAll('[data-catalog-filter]'));
+let active='all';
+const apply=()=>{const query=search.value.trim().toLowerCase();let count=0;catalog.forEach(card=>{const matchCat=active==='all'||card.dataset.category===active;const matchText=!query||card.dataset.search.includes(query);const show=matchCat&&matchText;card.hidden=!show;if(show)count++;});status.textContent='Showing '+count+' of '+catalog.length+' projects';document.getElementById('catalog-empty').hidden=count!==0;};
+filters.forEach(b=>b.addEventListener('click',()=>{active=b.dataset.catalogFilter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));apply();}));search.addEventListener('input',apply);
+const dialog=document.getElementById('project-dialog');
+document.querySelectorAll('[data-open]').forEach(button=>button.addEventListener('click',()=>{const p=records[button.dataset.open];if(!p)return;[['dialog-title','title'],['dialog-type','label'],['dialog-problem','problem'],['dialog-approach','approach'],['dialog-outcome','outcome']].forEach(([el,k])=>{document.getElementById(el).textContent=p[k];});document.getElementById('dialog-link').href=p.link;dialog.showModal();}));
+const close=()=>dialog.close();document.getElementById('dialog-close').addEventListener('click',close);document.getElementById('dialog-done').addEventListener('click',close);dialog.addEventListener('click',e=>{if(e.target===dialog)close();});
+})();
+</script>
+</body>
+</html>
