@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#091426">
+  <meta name="description" content="Private project review sign-in for Arash.">
+  <title>Private Review — Arash</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root{color-scheme:dark;--bg:#091426;--panel:#122740;--ink:#f3f7ff;--muted:#afc1d9;--stroke:#36506f;--blue:#88b7fb}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 78% 12%,#26538f67,transparent 46%),linear-gradient(135deg,#091426,#0e213c);color:var(--ink);font:16px/1.7 Inter,system-ui,-apple-system,sans-serif}
+    a{color:inherit;text-decoration:none}
+    .header{display:flex;align-items:center;justify-content:space-between;gap:20px;max-width:1100px;margin:auto;padding:30px 24px;border-bottom:1px solid #39547388}
+    .brand{font-weight:800;font-size:21px;letter-spacing:-.055em}.back{color:var(--muted);font-size:13px}.back:hover{color:white}
+    main{max-width:700px;margin:9vh auto 0;padding:24px}
+    .card{padding:clamp(24px,5.5vw,53px);border:1px solid var(--stroke);border-radius:24px;background:linear-gradient(150deg,#162d48,#0e1d32);box-shadow:0 22px 80px #0005}
+    .icon{height:76px;width:76px;border:1px solid #607fa7;background:#2b4f7b66;border-radius:21px;display:grid;place-items:center;color:#bad6ff}
+    .icon svg{width:39px;height:39px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round}
+    .eyebrow{margin:28px 0 12px;color:#9fc5ff;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:12px}
+    h1{font-size:clamp(33px,6vw,51px);letter-spacing:-.06em;line-height:1.13;margin:0 0 20px;font-weight:750}
+    .desc{max-width:540px;color:var(--muted);font-size:15px}
+    .panel{background:#0a192c;border:1px solid #344b68;border-radius:13px;padding:20px 22px;margin:28px 0}
+    .panel strong{font-size:14px}.panel p{color:var(--muted);font-size:13px;margin:7px 0 0}
+    .button{display:inline-flex;align-items:center;gap:12px;background:#4077ed;padding:13px 20px;border-radius:10px;font-size:14px;font-weight:750;margin:0 0 4px}
+    .button:hover{background:#5c93ff}.button[hidden]{display:none}
+    .status{color:#a8c2de;font-size:13px;margin:4px 0}
+    .foot{max-width:700px;margin:26px auto 0;padding:0 24px 42px;color:#90a9c7;font-size:12px}
+    @media(max-width:540px){.header{padding:20px}.back{font-size:12px}main{margin-top:5vh;padding:16px}.card{border-radius:18px}.foot{padding:0 18px 30px}}
+  </style>
+</head>
+<body>
+  <header class="header"><a class="brand" href="index.html">Arash<span style="color:#77aeff">.</span></a><a class="back" href="index.html">← Back to portfolio</a></header>
+  <main>
+    <section class="card" aria-labelledby="private-title">
+      <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4.5" y="10" width="15" height="12" rx="2"/><path d="M7.5 10V7a4.5 4.5 0 1 1 9 0v3M12 15v3"/></svg></div>
+      <p class="eyebrow">Personal workspace</p>
+      <h1 id="private-title">Private project review.</h1>
+      <p class="desc">Your in-depth project workflows, diagrams, and interview practice live in a separate, access-controlled workspace—not on this public website.</p>
+      <div class="panel">
+        <strong>Sign in with a one-time email code</strong>
+        <p>Only the individually authorized email account can access the private review. The approved email address is never published here.</p>
+      </div>
+      <a class="button" id="private-login-cta" href="#" rel="noopener noreferrer" hidden>Continue to secure sign-in →</a>
+      <p class="status" id="setup-status" role="status">Secure sign-in is not yet activated. The private workspace remains offline while its Cloudflare Access policy is configured.</p>
+    </section>
+  </main>
+  <footer class="foot">The public site does not store passwords, one-time codes, or private project notes.</footer>
+  <script>
+    // Configure only after the separate Cloudflare Worker is fully protected.
+    // This is the portal URL, NOT an email address or secret.
+    const PRIVATE_PORTAL_URL = '';
+    try {
+      if (PRIVATE_PORTAL_URL.trim()) {
+        const destination = new URL(PRIVATE_PORTAL_URL);
+        if (destination.protocol === 'https:' && destination.username === '' && destination.password === '') {
+          const link = document.getElementById('private-login-cta');
+          link.href = destination.href;
+          link.hidden = false;
+          document.getElementById('setup-status').textContent = 'You will be redirected to the protected sign-in page.';
+        }
+      }
+    } catch { /* Fail closed: no secure link until configuration is valid. */ }
+  </script>
+</body>
+</html>
