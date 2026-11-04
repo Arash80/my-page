@@ -342,6 +342,75 @@
 @media(max-width:770px) { .more-work-section {padding-top:70px;} .more-work-grid, .catalog-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .catalog-card {padding:18px;} .catalog-tools {align-items:stretch;} .catalog-search {width:100%;max-width:none;} .full-directory-items {grid-template-columns:1fr;} .directory-intro {padding-top:44px;} }
 @media(max-width:540px) { .more-work-grid, .catalog-grid {grid-template-columns:1fr;} .catalog-card {min-height:193px;} .directory-counts {gap:18px;} .catalog-filters button {font-size:10px;padding:8px 10px;} .full-directory > summary {padding:18px;} .full-directory-inner {padding-inline:18px;} }
 
+
+/* Portfolio refinement: stronger navy-and-blue hierarchy, without photos. */
+html[data-theme="dark"] {
+  --page: #091426;
+  --page-2: #0e1d32;
+  --panel: #14253e;
+  --panel-2: #1b3352;
+  --panel-3: #234063;
+  --ink: #f3f7ff;
+  --muted: #b6c7df;
+  --soft: #93a8c5;
+  --stroke: #39516f;
+  --stroke-soft: #2b405b;
+  --blue: #8bbcff;
+  --blue-strong: #5d9cff;
+  --nav: #0b192be9;
+  --glow: #3876ca75;
+}
+html[data-theme="dark"] body {
+  background:
+    radial-gradient(ellipse 88% 18% at 77% 4%, rgba(44, 105, 197, .27), transparent 72%),
+    radial-gradient(ellipse 72% 21% at 4% 41%, rgba(21, 114, 148, .13), transparent 77%),
+    linear-gradient(180deg, #091426 0%, #0c1a2e 46%, #081323 100%);
+}
+html[data-theme="dark"] body::before { display: none; }
+html[data-theme="dark"] .system-panel {
+  background: linear-gradient(147deg, #1b3659 0%, #142b47 45%, #0e1d34 100%);
+  border-color: #45658c;
+  box-shadow: 0 26px 62px rgba(2, 10, 23, .38);
+}
+html[data-theme="dark"] .project-card,
+html[data-theme="dark"] .catalog-card,
+html[data-theme="dark"] .research-card,
+html[data-theme="dark"] .approach,
+html[data-theme="dark"] .full-directory {
+  background: linear-gradient(155deg, #192f4e 0%, #142741 55%, #111f35 100%);
+  border-color: #365473;
+  box-shadow: 0 8px 30px rgba(2, 12, 26, .15);
+}
+html[data-theme="dark"] .project-card:hover,
+html[data-theme="dark"] .catalog-card:hover,
+html[data-theme="dark"] .research-card:hover {
+  border-color: #6c9bcf;
+  box-shadow: 0 18px 40px rgba(4, 15, 38, .3);
+}
+html[data-theme="dark"] .skills-strip {
+  background: linear-gradient(105deg, #152e4e 0%, #142640 58%, #1a3554 100%);
+  border-color: #3c5779;
+}
+html[data-theme="dark"] .contact-box {
+  background: linear-gradient(120deg, #246ab9 0%, #1d4b91 50%, #152f5f 100%);
+  border-color: #5c90cc;
+}
+html[data-theme="dark"] .hero-blue { color: #91bcff; }
+html[data-theme="dark"] .small-cta,
+html[data-theme="dark"] .filter-row button[aria-pressed="true"],
+html[data-theme="dark"] .catalog-filters button[aria-pressed="true"] {
+  background: #3574df;
+  border-color: #5b91fa;
+}
+html[data-theme="dark"] .btn-primary {
+  background: linear-gradient(130deg, #347af4, #528ff4);
+  border-color: #689df9;
+}
+@media (prefers-reduced-motion: reduce) {
+  html[data-theme="dark"] .project-card,
+  html[data-theme="dark"] .catalog-card { transition: none; }
+}
+
 </style>
 </head>
 <body>
