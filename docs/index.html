@@ -3,112 +3,297 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0a1423">
-  <meta name="description" content="Arash Golabi — Applied AI and Machine Learning Engineer in Montreal. ML platforms, agentic AI, Python services, and research in intelligent systems.">
-  <meta property="og:title" content="Arash Golabi — Applied AI & ML Engineer">
-  <meta property="og:description" content="From research to reliable AI. Explore selected engineering projects and research.">
-  <meta property="og:type" content="website">
-  <title>Arash Golabi — Applied AI & ML Engineer</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta name="description" content="Arash — Applied AI, machine learning, robotics, reinforcement learning, and control engineering portfolio">
+  <title>Arash | Applied AI, ML, Robotics &amp; Intelligent Control</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=portfolio-2">
-  <script src="site.js?v=portfolio-2" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="portfolio-filters.css">
 </head>
-<body id="top">
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
-  <a class="brand" href="index.html" aria-label="Arash Golabi home"><span class="brand-mark">ag<span>.</span></span><span class="brand-name">Arash Golabi</span></a>
-  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu <span aria-hidden="true">+</span></button>
-  <nav id="primary-nav" aria-label="Main navigation"><a href="#projects">Work</a><a href="#research-control">Research</a><a href="#about">About</a><a href="resume.html">Résumé <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a><a class="nav-contact" href="#contact">Get in touch <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></nav>
-</header>
-<main id="main">
-<section class="home-hero shell" aria-labelledby="hero-title">
-  <div class="hero-copy">
-    <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Applied AI & Machine Learning Engineer</p>
-    <h1 id="hero-title">From research<br>to <span>reliable AI.</span></h1>
-    <p class="hero-intro">I build AI applications, ML platforms, and Python services—with a research foundation in control and intelligent systems.</p>
-    <div class="hero-actions"><a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a><a class="text-link" href="resume.html">View résumé <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></div>
-    <div class="hero-meta mono"><span>Montreal, Canada</span><span>Research × engineering</span></div>
-  </div>
-  <figure class="systems-art" aria-labelledby="systems-caption">
-    <div class="art-heading mono"><span>A systems perspective</span><span aria-hidden="true">[ AG ]</span></div>
-    <div class="systems-map">
-      <div class="orbit orbit-outer" aria-hidden="true"></div><div class="orbit orbit-inner" aria-hidden="true"></div>
-      <div class="system-core"><span class="mono">Applied intelligence</span><strong>Built to work<br>as a system.</strong><span class="core-point" aria-hidden="true"></span></div>
-      <div class="system-node node-research"><span class="node-symbol" aria-hidden="true">01</span><span>Research<small>Question & evidence</small></span></div>
-      <div class="system-node node-model"><span class="node-symbol" aria-hidden="true">02</span><span>Model<small>Learn & evaluate</small></span></div>
-      <div class="system-node node-service"><span class="node-symbol" aria-hidden="true">03</span><span>Engineer<small>Serve & integrate</small></span></div>
-      <div class="system-node node-observe"><span class="node-symbol" aria-hidden="true">04</span><span>Observe<small>Monitor & investigate</small></span></div>
+<body>
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">Arash</a>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#research-control">Robotics &amp; Control</a>
+        <a href="#skills">Skills</a>
+        <a href="#publications">Publications</a>
+        <a href="resume.html">Résumé</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
-    <figcaption id="systems-caption"><span class="diagram-key" aria-hidden="true"></span> My approach: connect the model to the whole system.</figcaption>
-  </figure>
-</section>
-<div class="focus-strip"><div class="shell"><span class="mono">Areas of practice</span><span>Applied machine learning</span><span>Agentic AI & RAG</span><span>ML platforms</span><span>Python services</span></div></div>
-<section class="section shell" id="projects" aria-labelledby="projects-title">
-  <div class="section-heading"><div><p class="eyebrow">Selected work / 01</p><h2 id="projects-title">Ideas, built into systems.</h2></div><p>A closer look at the problems I work on<br class="desktop-break"> and the engineering behind the solutions.</p></div>
-  <div class="featured-grid">
-    <article class="feature-card feature-wide">
-      <a class="project-art aegis-art" href="aegisops.html" aria-label="Explore the AegisOps model lifecycle">
-        <div class="art-caption mono"><span>AegisOps</span><span>Model lifecycle</span></div>
-        <div class="aegis-pipeline" aria-hidden="true"><span>Train</span><i><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></i><span>Validate</span><i><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></i><span>Serve</span></div>
-        <div class="aegis-bottom" aria-hidden="true"><span><b class="small-dot"></b> Monitor & collect evidence</span><span>Read-only investigation <i><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></i></span></div>
-        <span class="art-corner" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span>
-      </a>
-      <div class="feature-content"><p class="project-category mono">MLOps / Agentic AI</p><h3><a href="aegisops.html">AegisOps</a></h3><p>A credit-risk platform connecting model governance, serving, monitoring, and evidence-based incident investigation.</p><div class="feature-bottom"><span>Model lifecycle · LangGraph · FastAPI</span><a class="text-link" href="aegisops.html">Explore case study <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></div></div>
-    </article>
-    <article class="feature-card feature-narrow">
-      <a class="project-art rag-art" href="techrag.html" aria-label="Explore the TechRAG document retrieval workflow">
-        <div class="art-caption mono"><span>TechRAG Local</span><span>Retrieval workflow</span></div>
-        <div class="rag-diagram" aria-hidden="true"><div class="document-stack"><div></div><div></div><div><span>PDF</span><i></i><i></i><i></i></div></div><span class="rag-arrow"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></span><div class="answer-outline"><span class="mono">Grounded answer</span><i></i><i></i><div><span>Source</span><span>Page</span><span>Chunk</span></div></div></div><span class="art-corner" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span>
-      </a>
-      <div class="feature-content"><p class="project-category mono">Local AI / Document intelligence</p><h3><a href="techrag.html">TechRAG Local</a></h3><p>A local document assistant that connects answers to their source passages, with browser and API interfaces.</p><div class="feature-bottom"><span>Ollama · Retrieval · FastAPI</span><a class="text-link" href="techrag.html">Explore case study <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></div></div>
-    </article>
-    <article class="feature-card feature-narrow">
-      <a class="project-art backend-art" href="workplaceops.html" aria-label="Explore WorkplaceOps booking protections">
-        <div class="art-caption mono"><span>WorkplaceOps</span><span>Booking safeguards</span></div>
-        <div class="booking-diagram" aria-hidden="true"><div class="booking-path"><span>Identity</span><i><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></i><span>Permission</span><i><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></i><span>Booking</span></div><div class="booking-lane"><span class="booking-accepted">Reservation accepted</span><span class="booking-conflict">Overlap blocked</span></div><p class="mono">Overlap prevention in PostgreSQL</p></div><span class="art-corner" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span>
-      </a>
-      <div class="feature-content"><p class="project-category mono">Python backend / API design</p><h3><a href="workplaceops.html">WorkplaceOps</a></h3><p>A room-booking API with authentication, role-based permissions, and database-enforced conflict prevention.</p><div class="feature-bottom"><span>FastAPI · PostgreSQL · SQLAlchemy</span><a class="text-link" href="workplaceops.html">Explore case study <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></div></div>
-    </article>
-    <article class="feature-card feature-wide">
-      <a class="project-art fraud-art" href="fraud-platform.html" aria-label="Explore the fraud platform's temporal evaluation design">
-        <div class="art-caption mono"><span>Fraud ML Platform</span><span>Evaluation design</span></div>
-        <div class="time-diagram" aria-hidden="true"><div class="time-phases"><span>Train<small>Fit features & model</small></span><span>Calibrate<small>Select threshold</small></span><span>Test<small>Future transactions</small></span></div><div class="time-axis"><span>Earlier observations</span><i><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></i><span>Later observations</span></div></div>
-        <div class="cloud-note mono">Local workflows <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-5-5 5 5-5 5M9 7l-5 5 5 5"/></svg></span> AWS SageMaker</div><span class="art-corner" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span>
-      </a>
-      <div class="feature-content"><p class="project-category mono">Machine learning / Cloud engineering</p><h3><a href="fraud-platform.html">Fraud Detection MLOps</a></h3><p>A reproducible fraud workflow built around temporal evaluation, calibrated decisions, and local-to-cloud execution.</p><div class="feature-bottom"><span>Airflow · MLflow · AWS SageMaker</span><a class="text-link" href="fraud-platform.html">Explore case study <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></div></div>
-    </article>
-  </div>
-</section>
-<section class="research-section" id="research-control" aria-labelledby="research-title"><div class="shell section">
-  <div class="section-heading"><div><p class="eyebrow">Research foundation / 02</p><h2 id="research-title">Intelligence meets<br>the physical world.</h2></div><p>My research connects learning, uncertainty, and control with the behavior of real systems.</p></div>
-  <div class="research-grid">
-    <article class="research-card"><div class="edge-visual" role="img" aria-label="Distributed inference across three Raspberry Pi nodes"><span>Pi 1<i>Features</i></span><b aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></b><span>Pi 2<i>Detection</i></span><b aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></b><span>Pi 3<i>Classification</i></span></div><p class="project-category mono">Distributed edge AI</p><h3>Robust learning beyond<br>a single device.</h3><p>Partitioned inference and adversarial feature detection evaluated across Raspberry Pi devices.</p><a class="text-link" href="case-studies.html#distributed-edge-ai">Explore research <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></article>
-    <article class="research-card"><div class="control-visual" role="img" aria-label="Closed-loop learning connects a controller, process, and feedback"><span>Controller</span><b aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></b><span>Process</span><div class="feedback-line"><i>Feedback</i></div></div><p class="project-category mono">Reinforcement learning & control</p><h3>Learning to operate<br>under constraints.</h3><p>Deep reinforcement learning for energy-aware operation of reverse-osmosis desalination.</p><a class="text-link" href="case-studies.html#rl-desalination">Explore research <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></article>
-    <article class="research-card"><div class="model-visual" aria-hidden="true"><span>Data</span><i><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></i><strong>Model <em>θ(p)</em></strong><i><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></i><span>Dynamics</span></div><p class="project-category mono">System identification</p><h3>Models that account<br>for changing conditions.</h3><p>Bayesian identification of parameter-varying models for complex dynamic processes.</p><a class="text-link" href="case-studies.html#lpv-identification">Explore research <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></article>
-  </div>
-  <div class="research-more"><span class="mono">Also in research & robotics</span><a href="case-studies.html#prm-planner">Motion planning <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a><a href="case-studies.html#two-link-robot">Robot dynamics <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a><a href="case-studies.html#hardware-trojan">Hardware security <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div>
-</div></section>
-<section class="section shell" id="more-work" aria-labelledby="more-title">
-  <div class="section-heading"><div><p class="eyebrow">Project notebook / 03</p><h2 id="more-title">More things I’ve built.</h2></div><a class="text-link" href="case-studies.html">All case studies <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></div>
-  <div class="directory-toolbar"><div class="project-filters" role="group" aria-label="Filter additional projects"><button type="button" data-filter="all" aria-pressed="true">All work</button><button type="button" data-filter="genai" aria-pressed="false">GenAI & agents</button><button type="button" data-filter="data" aria-pressed="false">ML & data</button><button type="button" data-filter="trustworthy" aria-pressed="false">Trustworthy AI</button></div><span id="filter-status" class="mono" role="status" aria-live="polite">8 projects</span></div>
-  <div class="project-directory" id="project-grid">
-    <article class="directory-item" data-categories="genai"><span class="directory-number mono" aria-hidden="true">01</span><div><h3><a href="case-studies.html#alignmentops">AlignmentOps <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></h3><p>Reproducible LoRA fine-tuning and controlled LLM evaluation.</p><span class="directory-stack mono">LLM post-training · Evaluation</span></div></article>
-    <article class="directory-item" data-categories="genai trustworthy"><span class="directory-number mono" aria-hidden="true">02</span><div><h3><a href="case-studies.html#metrictrace">MetricTrace <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></h3><p>Deterministic metric computation with auditable evidence.</p><span class="directory-stack mono">Typed contracts · Reliable AI</span></div></article>
-    <article class="directory-item" data-categories="genai trustworthy"><span class="directory-number mono" aria-hidden="true">03</span><div><h3><a href="case-studies.html#agentic-rag">Advanced Agentic RAG <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></h3><p>Retrieval, reranking, and corrective routing for document intelligence.</p><span class="directory-stack mono">Hybrid retrieval · Evidence checks</span></div></article>
-    <article class="directory-item" data-categories="genai"><span class="directory-number mono" aria-hidden="true">04</span><div><h3><a href="case-studies.html#deskpilot">DeskPilot <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></h3><p>A local help-desk assistant across structured and document sources.</p><span class="directory-stack mono">Local inference · Multi-source RAG</span></div></article>
-    <article class="directory-item" data-categories="data"><span class="directory-number mono" aria-hidden="true">05</span><div><h3><a href="case-studies.html#etl-pipeline">NASA APOD Pipeline <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></h3><p>Repeatable data ingestion with validation and idempotent upserts.</p><span class="directory-stack mono">Airflow · PostgreSQL</span></div></article>
-    <article class="directory-item" data-categories="data trustworthy"><span class="directory-number mono" aria-hidden="true">06</span><div><h3><a href="case-studies.html#chest-xray">Chest X-Ray Diagnosis <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></h3><p>Patient-disjoint evaluation and visual explanations for deep learning.</p><span class="directory-stack mono">DenseNet121 · GradCAM</span></div></article>
-    <article class="directory-item" data-categories="genai trustworthy"><span class="directory-number mono" aria-hidden="true">07</span><div><h3><a href="fraudscope.html">FraudScope Agents <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></h3><p>Local agents for guarded, verified, and auditable data analysis.</p><span class="directory-stack mono">Multi-agent workflows · Verification</span></div></article>
-    <article class="directory-item" data-categories="genai trustworthy"><span class="directory-number mono" aria-hidden="true">08</span><div><h3><a href="case-studies.html#cyber-graphrag">CyberGraphRAG <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></h3><p>Research answers connected to graph context and source pages.</p><span class="directory-stack mono">Knowledge graphs · Local AI</span></div></article>
-  </div>
-</section>
-<section class="about-section section shell" id="about" aria-labelledby="about-title"><div class="about-copy"><p class="eyebrow">About / 04</p><h2 id="about-title">A researcher’s curiosity.<br>An engineer’s discipline.</h2><p>I’m Arash, an Applied AI and Machine Learning Engineer based in Montreal. My work brings together practical software development and research in trustworthy AI, reinforcement learning, and control.</p><p>I’m interested in the decisions around a model as much as the model itself: how it is evaluated, how it becomes a service, and how its behavior can be understood.</p><a class="text-link" href="resume.html">More about my experience <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></div><div class="capability-list" id="skills" aria-label="Technical focus"><div><span class="mono">01</span><h3>Build & evaluate models</h3><p>PyTorch, scikit-learn, XGBoost, calibration, and time-aware evaluation.</p></div><div><span class="mono">02</span><h3>Engineer AI applications</h3><p>Retrieval, agent workflows, local inference, and evidence-grounded responses.</p></div><div><span class="mono">03</span><h3>Deliver dependable services</h3><p>FastAPI, PostgreSQL, Docker, orchestration, monitoring, and automated checks.</p></div><div><span class="mono">04</span><h3>Understand dynamic systems</h3><p>Reinforcement learning, estimation, system identification, and control.</p></div></div></section>
-<section class="publications-section section shell" id="publications" aria-labelledby="publications-title"><div class="section-heading"><div><p class="eyebrow">Selected publications / 05</p><h2 id="publications-title">Research, in print.</h2></div><a class="text-link" href="https://scholar.google.com/citations?hl=en&amp;user=JTtQ114AAAAJ" target="_blank" rel="noreferrer">Google Scholar <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></div><div class="publication-list"><article><span class="pub-year mono">2025</span><div><p>International Journal of Information Security</p><h3><a href="https://doi.org/10.1007/s10207-025-01049-5" target="_blank" rel="noreferrer">A dual-stage deep learning approach for robust detection and identification of hardware trojans using Monte-Carlo dropout <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></h3></div></article><article><span class="pub-year mono">2024</span><div><p>Applied Intelligence</p><h3><a href="https://doi.org/10.1007/s10489-024-05452-8" target="_blank" rel="noreferrer">Optimal operation of reverse osmosis desalination process with deep reinforcement learning methods <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></h3></div></article><article><span class="pub-year mono">2017</span><div><p>IEEE Transactions on Control Systems Technology</p><h3><a href="https://doi.org/10.1109/TCST.2016.2642159" target="_blank" rel="noreferrer">A Bayesian Approach for LPV Model Identification and Its Application to Complex Processes <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a></h3></div></article></div><a class="subtle-link" href="https://dblp.org/pid/158/4994" target="_blank" rel="noreferrer">Browse publication record on DBLP <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></section>
-<section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="shell"><div><p class="eyebrow">Let’s connect</p><h2 id="contact-title">Have a problem<br>worth solving?</h2><p>I’d be glad to discuss an engineering role, a research collaboration, or the thinking behind a project.</p></div><div class="contact-actions"><a class="contact-email" href="mailto:arash.shm62@gmail.com">Say hello <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></span></a><button class="copy-email" type="button" data-copy-email="arash.shm62@gmail.com" aria-label="Copy email address">arash.shm62@gmail.com <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 9h11v11H9zM15 9V4H4v11h5"/></svg></span></button><span class="copy-status mono" role="status" aria-live="polite"></span><div><a href="https://github.com/Arash80" target="_blank" rel="noreferrer">GitHub <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a><a href="resume.html">Résumé <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a><a href="https://scholar.google.com/citations?hl=en&amp;user=JTtQ114AAAAJ" target="_blank" rel="noreferrer">Scholar <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6h12v12"/></svg></a></div></div></div></section>
-</main>
-<footer class="site-footer shell"><a class="brand" href="index.html"><span class="brand-mark">ag<span>.</span></span><span>Arash Golabi</span></a><p>Applied AI. Thoughtful engineering.</p><a href="#main">Back to top <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20V4m-6 6 6-6 6 6"/></svg></a></footer>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="kicker">Applied AI · Machine Learning · Robotics · Reinforcement Learning · Control</p>
+        <h1>Building reliable AI and intelligent control systems from research to deployment.</h1>
+        <p class="lead">I am an Applied AI and Machine Learning Engineer with a strong control-engineering background. I build production-oriented ML systems, agentic AI applications, trustworthy AI tools, and learning-based solutions for robotics, dynamic systems, and cyber-physical systems.</p>
+        <div class="actions">
+          <a class="button primary" href="#projects">View projects</a>
+          <a class="button secondary" href="resume.html">View résumé</a>
+          <a class="button secondary" href="mailto:arash.shm62@gmail.com">Contact me</a>
+          <a class="button secondary" href="https://github.com/Arash80" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <img src="https://avatars.githubusercontent.com/u/20566834?v=4" alt="Portrait of Arash Golabi">
+        <div>
+          <strong>Arash</strong>
+          <span>Applied AI &amp; ML Engineer</span>
+          <span>ML · Robotics · RL · Intelligent Control</span>
+          <span>Montreal, Canada</span>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="projects">
+      <div class="wrap">
+        <p class="kicker">Engineering portfolio</p>
+        <h2>Selected AI and data projects</h2>
+        <p class="section-intro">LLM post-training, production ML, MLOps, agentic AI, local AI, deep learning, and knowledge-system projects. Use the filters to focus on the work most relevant to a role.</p>
+
+        <div class="project-filters" role="group" aria-label="Filter projects">
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-button" type="button" data-filter="ml">ML &amp; Deep Learning</button>
+          <button class="filter-button" type="button" data-filter="mlops">MLOps &amp; Data</button>
+          <button class="filter-button" type="button" data-filter="genai">GenAI &amp; Agents</button>
+          <button class="filter-button" type="button" data-filter="trustworthy">Trustworthy AI</button>
+        </div>
+
+        <div class="cards project-grid" id="project-grid">
+          <article class="card" data-categories="ml mlops genai trustworthy">
+            <span class="tag">MLOps · GCP · Agentic AI</span>
+            <h3>AegisOps Loan Risk</h3>
+            <p>Production-oriented credit-risk platform with Vertex AI training, cost-aware threshold selection, Cloud Run serving, drift monitoring, synthetic incidents, and evidence-grounded LangGraph diagnosis.</p>
+            <div class="stack">XGBoost · Vertex AI · Cloud Run · FastAPI · LangChain · LangGraph · Gemini</div>
+            <a href="case-studies.html#aegisops" aria-label="Read the AegisOps Loan Risk case study">Read case study →</a>
+          </article>
+
+          <article class="card" data-categories="genai ml trustworthy">
+            <span class="tag">LLM Post-Training · LoRA</span>
+            <h3>AlignmentOps</h3>
+            <p>Reproducible Gemma 3 1B IT post-training and evaluation workflow with curated OASST1 conversations, completion-only LoRA SFT, controlled base-vs-adapter evaluation, generation diagnostics, and an ML-troubleshooting specialization data pipeline.</p>
+            <div class="stack">Gemma 3 · PyTorch · Hugging Face Transformers · TRL · PEFT/LoRA · SFT</div>
+          </article>
+
+          <article class="card" data-categories="trustworthy genai">
+            <span class="tag">Reliable AI</span>
+            <h3>MetricTrace</h3>
+            <p>Auditable metric-computation system that separates deterministic calculations from optional LLM-generated explanations.</p>
+            <div class="stack">Python · Pydantic · LangChain · Streamlit · pytest</div>
+            <a href="case-studies.html#metrictrace" aria-label="Read the MetricTrace case study">Read case study →</a>
+          </article>
+
+          <article class="card" data-categories="ml mlops trustworthy">
+            <span class="tag">MLOps · AWS</span>
+            <h3>Fraud Detection MLOps Platform — Local &amp; AWS</h3>
+            <p>Built a production-oriented fraud platform with temporal validation, calibrated models, MLflow and Airflow workflows, containerized API serving, and AWS-managed processing, training, evaluation, deployment, and endpoint inference.</p>
+            <div class="stack">LightGBM · Airflow · MLflow · FastAPI · Docker · AWS SageMaker AI · S3</div>
+            <a href="https://github.com/Arash80/fraud-ml-platform" target="_blank" rel="noreferrer" aria-label="View the Fraud ML Platform repository on GitHub">View repository →</a>
+            <a href="case-studies.html#fraud-platform" aria-label="Read the Fraud ML Platform case study">Read case study →</a>
+          </article>
+
+          <article class="card" data-categories="genai trustworthy">
+            <span class="tag">Agentic AI</span>
+            <h3>Advanced Agentic RAG</h3>
+            <p>Evaluation-oriented document-intelligence system with hybrid retrieval, reranking, evidence checks, corrective routing, citations, guardrails, and tracing.</p>
+            <div class="stack">LangChain · Qdrant · BM25 · Reranking · Phoenix</div>
+            <a href="case-studies.html#agentic-rag" aria-label="Read the Advanced Agentic RAG case study">Read case study →</a>
+          </article>
+
+          <article class="card" data-categories="genai trustworthy">
+            <span class="tag">Local RAG</span>
+            <h3>DeskPilot</h3>
+            <p>Privacy-aware IT help-desk assistant with local inference and retrieval across CSV, SQLite, and PDF knowledge sources.</p>
+            <div class="stack">Ollama · Chroma · LangChain · Streamlit</div>
+            <a href="case-studies.html#deskpilot" aria-label="Read the DeskPilot case study">Read case study →</a>
+          </article>
+
+          <article class="card" data-categories="mlops">
+            <span class="tag">Data Engineering</span>
+            <h3>ETL Pipeline</h3>
+            <p>Tested Airflow pipeline that ingests NASA APOD data, validates records, and performs idempotent PostgreSQL upserts.</p>
+            <div class="stack">Airflow · Astro · PostgreSQL · Docker · GitHub Actions</div>
+            <a href="case-studies.html#etl-pipeline" aria-label="Read the ETL Pipeline case study">Read case study →</a>
+          </article>
+
+          <article class="card" data-categories="ml">
+            <span class="tag">Deep Learning</span>
+            <h3>Chest X-Ray Diagnosis</h3>
+            <p>Multi-label DenseNet121 workflow with patient-disjoint validation, AUROC evaluation, experiment tracking, and GradCAM explanations.</p>
+            <div class="stack">PyTorch · DenseNet121 · MLflow · GradCAM</div>
+            <a href="https://github.com/Arash80/chest-xray-diagnosis" target="_blank" rel="noreferrer" aria-label="View the Chest X-Ray Diagnosis repository on GitHub">View repository →</a>
+            <a href="case-studies.html#chest-xray" aria-label="Read the Chest X-Ray Diagnosis case study">Read case study →</a>
+          </article>
+
+          <article class="card" data-categories="genai trustworthy ml">
+            <span class="tag">Multi-Agent AI · Local LLMs</span>
+            <h3>FraudScope Agents</h3>
+            <p>Local multi-agent data-analysis system that coordinates code generation, guarded execution, result verification, and automatic repair while producing deterministic and auditable dataset reports.</p>
+            <div class="stack">Microsoft AutoGen · Qwen · Ollama · pandas · Streamlit · Jupyter · pytest</div>
+            <a href="fraudscope.html" aria-label="Read the FraudScope Agents case study">Read case study →</a>
+          </article>
+
+          <article class="card" data-categories="genai trustworthy">
+            <span class="tag">Knowledge Graphs</span>
+            <h3>CyberGraphRAG</h3>
+            <p>Local cybersecurity research assistant combining Neo4j graph context, semantic retrieval, generation, and page-level citations.</p>
+            <div class="stack">Neo4j · GraphRAG · Ollama · Embeddings</div>
+            <a href="case-studies.html#cyber-graphrag" aria-label="Read the CyberGraphRAG case study">Read case study →</a>
+          </article>
+
+          <article class="card" data-categories="genai mlops trustworthy">
+            <span class="tag">Local AI</span>
+            <h3>TechRAG Local</h3>
+            <p>Local PDF question-answering application with safe upload handling, citations, latency reporting, evaluation, Streamlit, and FastAPI.</p>
+            <div class="stack">PyMuPDF · Ollama · Streamlit · FastAPI · CI</div>
+            <a href="case-studies.html#techrag-local" aria-label="Read the TechRAG Local case study">Read case study →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="research-control">
+      <div class="wrap">
+        <p class="kicker">Robotics, reinforcement learning &amp; control</p>
+        <h2>Planning, dynamics, estimation, security, and control</h2>
+        <p class="section-intro">A focused selection of code-based MATLAB robotics projects and publication-backed research. This section shows my control-engineering foundation without overwhelming the AI/ML portfolio.</p>
+
+        <div class="cards project-grid research-project-grid">
+          <article class="card">
+            <span class="tag">Robotics &amp; Planning</span>
+            <h3>Probabilistic Roadmap Planner</h3>
+            <p>Reusable 2-D PRM planner with deterministic sampling, exact obstacle collision checks, weighted graph construction, shortest-path search, bounded retries, visualization, and unit tests.</p>
+            <div class="stack">MATLAB · Motion Planning · Graph Search · Unit Testing</div>
+            <a href="case-studies.html#prm-planner">Read case study →</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">Robot Control</span>
+            <h3>Two-Link Robot Position Control</h3>
+            <p>MATLAB/Simulink model combining inverse kinematics, coupled manipulator dynamics, DC motor parameters, position-control simulation, and animated visualization.</p>
+            <div class="stack">MATLAB/Simulink · Inverse Kinematics · Robot Dynamics</div>
+            <a href="case-studies.html#two-link-robot">Read case study →</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">Reinforcement Learning</span>
+            <h3>RL-Based Desalination Control</h3>
+            <p>Deep reinforcement-learning methods for energy-aware operation of reverse-osmosis desalination under changing demand and operating constraints.</p>
+            <div class="stack">Deep RL · Process Control · Energy Optimization · MATLAB</div>
+            <a href="case-studies.html#rl-desalination">Read research summary →</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">AI Security</span>
+            <h3>Hardware Trojan Detection</h3>
+            <p>Uncertainty-aware deep-learning framework for robust detection and identification of hardware Trojans using Monte Carlo dropout.</p>
+            <div class="stack">Deep Learning · Uncertainty · Cybersecurity · Classification</div>
+            <a href="case-studies.html#hardware-trojan">Read research summary →</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">System Identification</span>
+            <h3>Bayesian LPV Identification</h3>
+            <p>Bayesian identification of linear parameter-varying models for complex dynamic processes and control-oriented analysis.</p>
+            <div class="stack">LPV Models · Bayesian Estimation · State Space · Control</div>
+            <a href="case-studies.html#lpv-identification">Read research summary →</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">Distributed Edge AI</span>
+            <h3>Distributed Edge AI &amp; Adversarial Detection</h3>
+            <p>Built and evaluated a three-node Raspberry Pi distributed-inference pipeline with partitioned VGG11, feature-space attack injection, Mahalanobis-distance anomaly detection, and real-device overhead measurement.</p>
+            <div class="stack">PyTorch · Raspberry Pi · Distributed Inference · Adversarial ML · CIFAR-10</div>
+            <a href="case-studies.html#distributed-edge-ai">Read research summary →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="wrap">
+        <p class="kicker">Capabilities</p>
+        <h2>Technical focus</h2>
+        <div class="skill-grid">
+          <div><h3>Machine Learning</h3><p>PyTorch, scikit-learn, LightGBM, XGBoost, pandas, NumPy, model calibration, temporal validation, imbalanced learning, and rigorous evaluation.</p></div>
+          <div><h3>GenAI &amp; Agents</h3><p>Hugging Face Transformers, TRL, PEFT/LoRA, SFT, LangChain, LangGraph, Microsoft AutoGen, LCEL, Ollama, Qdrant, Chroma, FAISS, Neo4j, GraphRAG, hybrid retrieval, reranking, and guardrails.</p></div>
+          <div><h3>MLOps &amp; Cloud</h3><p>MLflow, Airflow, FastAPI, Docker, PostgreSQL, GitHub Actions, pytest, AWS SageMaker AI, Amazon S3, IAM, CloudWatch, Google Vertex AI, Cloud Run, Cloud Build, Artifact Registry, managed training, deployment, and endpoint inference.</p></div>
+          <div><h3>Robotics, RL &amp; Control</h3><p>Motion planning, robot kinematics and dynamics, MATLAB/Simulink, deep reinforcement learning, state-space modeling, system identification, observers, fault detection, cyber-physical systems, and robust control.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="publications">
+      <div class="wrap">
+        <div class="research-heading">
+          <div>
+            <p class="kicker">Research record</p>
+            <h2>Selected publications</h2>
+          </div>
+          <p>I am an author or co-author of 14 peer-reviewed journal and conference publications spanning trustworthy AI, reinforcement learning, cyber-physical systems, fault detection, control, and system identification.</p>
+        </div>
+        <div class="publication-grid">
+          <article class="publication">
+            <span>2025 · International Journal of Information Security</span>
+            <h3>A dual-stage deep learning approach for robust detection and identification of hardware trojans using Monte-Carlo dropout</h3>
+            <a href="https://doi.org/10.1007/s10207-025-01049-5" target="_blank" rel="noreferrer">View paper →</a>
+          </article>
+          <article class="publication">
+            <span>2024 · Applied Intelligence</span>
+            <h3>Optimal operation of reverse osmosis desalination process with deep reinforcement learning methods</h3>
+            <a href="https://doi.org/10.1007/s10489-024-05452-8" target="_blank" rel="noreferrer">View paper →</a>
+          </article>
+          <article class="publication">
+            <span>2017 · IEEE Transactions on Control Systems Technology</span>
+            <h3>A Bayesian Approach for LPV Model Identification and Its Application to Complex Processes</h3>
+            <a href="https://doi.org/10.1109/TCST.2016.2642159" target="_blank" rel="noreferrer">View paper →</a>
+          </article>
+        </div>
+        <div class="research-actions">
+          <a class="button secondary" href="https://scholar.google.com/citations?hl=en&amp;user=JTtQ114AAAAJ" target="_blank" rel="noreferrer">View Google Scholar</a>
+          <a class="button secondary" href="https://dblp.org/pid/158/4994" target="_blank" rel="noreferrer">View DBLP</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="wrap footer-inner">
+      <div><strong>Arash</strong><span>Applied AI &amp; Machine Learning Engineer</span></div>
+      <div class="footer-links">
+        <a href="mailto:arash.shm62@gmail.com">arash.shm62@gmail.com</a>
+        <a href="https://github.com/Arash80" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const filterButtons = document.querySelectorAll(".filter-button");
+    const projectCards = document.querySelectorAll("#project-grid .card");
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
+
+        filterButtons.forEach((item) => {
+          const active = item === button;
+          item.classList.toggle("is-active", active);
+          item.setAttribute("aria-pressed", String(active));
+        });
+
+        projectCards.forEach((card) => {
+          const categories = card.dataset.categories.split(" ");
+          card.hidden = filter !== "all" && !categories.includes(filter);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
